@@ -25,21 +25,16 @@ async function getCommitDiff(
 
 async function main() {
   try {
-    const token = core.getInput("github_token") || process.env.GITHUB_TOKEN;
-    const anthropicKey =
-      core.getInput("anthropic_api_key") || process.env.ANTHROPIC_API_KEY;
-    const daytonaKey =
-      core.getInput("daytona_api_key") || process.env.DAYTONA_API_KEY;
+    const token = process.env.GITHUB_TOKEN;
+    const anthropicKey = process.env.ANTHROPIC_API_KEY;
+    const daytonaKey = process.env.DAYTONA_API_KEY;
     const docsPath = core.getInput("docs_path") || "docs";
 
     if (!token || !anthropicKey || !daytonaKey) {
-      throw new Error("Missing required env var(s)");
+      throw new Error(
+        "Missing required env var(s): GITHUB_TOKEN, ANTHROPIC_API_KEY, DAYTONA_API_KEY",
+      );
     }
-
-    // Set API keys for SDKs
-    process.env.GITHUB_TOKEN = token;
-    process.env.ANTHROPIC_API_KEY = anthropicKey;
-    process.env.DAYTONA_API_KEY = daytonaKey;
 
     const { owner, repo } = github.context.repo;
     const repoUrl = `https://github.com/${owner}/${repo}.git`;

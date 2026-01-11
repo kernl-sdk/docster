@@ -15,9 +15,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: kernl-sdk/docster@master
-        with:
-          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          daytona_api_key: ${{ secrets.DAYTONA_API_KEY }}
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          DAYTONA_API_KEY: ${{ secrets.DAYTONA_API_KEY }}
 ```
 
 2. Add secrets to your repo (**Settings → Secrets and variables → Actions**):
@@ -28,10 +28,11 @@ jobs:
 
 ```yaml
 - uses: kernl-sdk/docster@master
+  env:
+    ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+    DAYTONA_API_KEY: ${{ secrets.DAYTONA_API_KEY }}
   with:
-    anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-    daytona_api_key: ${{ secrets.DAYTONA_API_KEY }}
-    docs_path: "documentation"  # custom path
+    docs_path: "documentation"
 ```
 
 ## How it works

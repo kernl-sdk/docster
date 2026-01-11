@@ -7,16 +7,6 @@ branding:
   color: "purple"
 
 inputs:
-  anthropic_api_key:
-    description: "Anthropic API key for Claude"
-    required: true
-  daytona_api_key:
-    description: "Daytona API key for sandbox"
-    required: true
-  github_token:
-    description: "GitHub token for repo access"
-    required: false
-    default: ${{ github.token }}
   docs_path:
     description: "Path to documentation folder"
     required: false

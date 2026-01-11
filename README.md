@@ -102,8 +102,8 @@ const triager = new Agent<RepoContext, typeof TriageSchema>({
   name: "Triager",
   model: anthropic("claude-sonnet-4-5"),
   output: TriageSchema,
-  toolkits: [repoRead], // can explore README, docs folder via GitHub API
   instructions: `Analyze code diffs to determine if docs need updating...`,
+  toolkits: [repoRead], // can explore README, docs folder via GitHub API
 });
 ```
 
@@ -114,7 +114,6 @@ const docster = new Agent<DocsterContext>({
   id: "docster",
   name: "Docster",
   model: anthropic("claude-opus-4-5"),
-  toolkits: [fs, git, process, pulls],
   instructions: `
     You update documentation based on code changes.
     1. Clone the repo
@@ -122,6 +121,7 @@ const docster = new Agent<DocsterContext>({
     3. Update relevant docs
     4. Create branch, commit, push, open PR
   `,
+  toolkits: [fs, git, process, pulls],
 });
 ```
 

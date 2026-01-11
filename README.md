@@ -113,7 +113,7 @@ const triager = new Agent<RepoContext, typeof TriageSchema>({
 const docster = new Agent<DocsterContext>({
   id: "docster",
   name: "Docster",
-  model: anthropic("claude-opus-4-5"),
+  model: anthropic("claude-sonnet-4-5"),
   instructions: `
     You update documentation based on code changes.
     1. Clone the repo

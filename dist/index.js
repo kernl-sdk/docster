@@ -160899,7 +160899,7 @@ const mcp_github = new MCPToolkit({
 const docster = new Agent({
     id: "docster",
     name: "Docster",
-    model: anthropic_anthropic("claude-opus-4-5"),
+    model: anthropic_anthropic("claude-sonnet-4-5"),
     instructions: `
 You are Docster, a documentation specialist. Your job is to keep docs in sync with code changes.
 

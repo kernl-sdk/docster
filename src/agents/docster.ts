@@ -9,7 +9,7 @@ type DocsterContext = SandboxContext & RepoContext;
 export const docster = new Agent<DocsterContext>({
   id: "docster",
   name: "Docster",
-  model: anthropic("claude-opus-4-5"),
+  model: anthropic("claude-sonnet-4-5"),
   instructions: `
 You are Docster, a documentation specialist. Your job is to keep docs in sync with code changes.
 

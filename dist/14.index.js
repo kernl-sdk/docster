@@ -1,8 +1,8 @@
-export const id = 588;
-export const ids = [588];
+export const id = 14;
+export const ids = [14];
 export const modules = {
 
-/***/ 59499:
+/***/ 63320:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
@@ -117,7 +117,7 @@ exports.InvokeStore = void 0;
                 if (globalThis.awslambda?.InvokeStore) {
                     delete globalThis.awslambda.InvokeStore;
                 }
-                globalThis.awslambda = {};
+                globalThis.awslambda = { InvokeStore: undefined };
             },
         }
         : undefined;
@@ -128,7 +128,7 @@ exports.InvokeStoreBase = InvokeStoreBase;
 
 /***/ }),
 
-/***/ 83294:
+/***/ 61186:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
@@ -136,9 +136,9 @@ exports.InvokeStoreBase = InvokeStoreBase;
 // SPDX-License-Identifier: Apache-2.0
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.AwsCrc32 = void 0;
-var tslib_1 = __webpack_require__(53824);
-var util_1 = __webpack_require__(71255);
-var index_1 = __webpack_require__(14123);
+var tslib_1 = __webpack_require__(67892);
+var util_1 = __webpack_require__(9267);
+var index_1 = __webpack_require__(79479);
 var AwsCrc32 = /** @class */ (function () {
     function AwsCrc32() {
         this.crc32 = new index_1.Crc32();
@@ -165,14 +165,14 @@ exports.AwsCrc32 = AwsCrc32;
 
 /***/ }),
 
-/***/ 14123:
+/***/ 79479:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.AwsCrc32 = exports.Crc32 = exports.crc32 = void 0;
-var tslib_1 = __webpack_require__(53824);
-var util_1 = __webpack_require__(71255);
+var tslib_1 = __webpack_require__(67892);
+var util_1 = __webpack_require__(9267);
 function crc32(data) {
     return new Crc32().update(data).digest();
 }
@@ -273,13 +273,13 @@ var a_lookUpTable = [
     0xB40BBE37, 0xC30C8EA1, 0x5A05DF1B, 0x2D02EF8D,
 ];
 var lookupTable = (0, util_1.uint32ArrayFrom)(a_lookUpTable);
-var aws_crc32_1 = __webpack_require__(83294);
+var aws_crc32_1 = __webpack_require__(61186);
 Object.defineProperty(exports, "AwsCrc32", ({ enumerable: true, get: function () { return aws_crc32_1.AwsCrc32; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 22109:
+/***/ 5881:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
@@ -287,9 +287,9 @@ Object.defineProperty(exports, "AwsCrc32", ({ enumerable: true, get: function ()
 // SPDX-License-Identifier: Apache-2.0
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.AwsCrc32c = void 0;
-var tslib_1 = __webpack_require__(53824);
-var util_1 = __webpack_require__(71255);
-var index_1 = __webpack_require__(11219);
+var tslib_1 = __webpack_require__(67892);
+var util_1 = __webpack_require__(9267);
+var index_1 = __webpack_require__(89839);
 var AwsCrc32c = /** @class */ (function () {
     function AwsCrc32c() {
         this.crc32c = new index_1.Crc32c();
@@ -316,7 +316,7 @@ exports.AwsCrc32c = AwsCrc32c;
 
 /***/ }),
 
-/***/ 11219:
+/***/ 89839:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
@@ -324,8 +324,8 @@ exports.AwsCrc32c = AwsCrc32c;
 // SPDX-License-Identifier: Apache-2.0
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.AwsCrc32c = exports.Crc32c = exports.crc32c = void 0;
-var tslib_1 = __webpack_require__(53824);
-var util_1 = __webpack_require__(71255);
+var tslib_1 = __webpack_require__(67892);
+var util_1 = __webpack_require__(9267);
 function crc32c(data) {
     return new Crc32c().update(data).digest();
 }
@@ -394,13 +394,13 @@ var a_lookupTable = [
     0x79B737BA, 0x8BDCB4B9, 0x988C474D, 0x6AE7C44E, 0xBE2DA0A5, 0x4C4623A6, 0x5F16D052, 0xAD7D5351,
 ];
 var lookupTable = (0, util_1.uint32ArrayFrom)(a_lookupTable);
-var aws_crc32c_1 = __webpack_require__(22109);
+var aws_crc32c_1 = __webpack_require__(5881);
 Object.defineProperty(exports, "AwsCrc32c", ({ enumerable: true, get: function () { return aws_crc32c_1.AwsCrc32c; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 30703:
+/***/ 28267:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
@@ -408,7 +408,7 @@ Object.defineProperty(exports, "AwsCrc32c", ({ enumerable: true, get: function (
 // SPDX-License-Identifier: Apache-2.0
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.convertToBuffer = void 0;
-var util_utf8_1 = __webpack_require__(11478);
+var util_utf8_1 = __webpack_require__(45714);
 // Quick polyfill
 var fromUtf8 = typeof Buffer !== "undefined" && Buffer.from
     ? function (input) { return Buffer.from(input, "utf8"); }
@@ -430,7 +430,7 @@ exports.convertToBuffer = convertToBuffer;
 
 /***/ }),
 
-/***/ 71255:
+/***/ 9267:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
@@ -438,19 +438,19 @@ exports.convertToBuffer = convertToBuffer;
 // SPDX-License-Identifier: Apache-2.0
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.uint32ArrayFrom = exports.numToUint8 = exports.isEmptyData = exports.convertToBuffer = void 0;
-var convertToBuffer_1 = __webpack_require__(30703);
+var convertToBuffer_1 = __webpack_require__(28267);
 Object.defineProperty(exports, "convertToBuffer", ({ enumerable: true, get: function () { return convertToBuffer_1.convertToBuffer; } }));
-var isEmptyData_1 = __webpack_require__(86342);
+var isEmptyData_1 = __webpack_require__(78978);
 Object.defineProperty(exports, "isEmptyData", ({ enumerable: true, get: function () { return isEmptyData_1.isEmptyData; } }));
-var numToUint8_1 = __webpack_require__(88288);
+var numToUint8_1 = __webpack_require__(2732);
 Object.defineProperty(exports, "numToUint8", ({ enumerable: true, get: function () { return numToUint8_1.numToUint8; } }));
-var uint32ArrayFrom_1 = __webpack_require__(10605);
+var uint32ArrayFrom_1 = __webpack_require__(35601);
 Object.defineProperty(exports, "uint32ArrayFrom", ({ enumerable: true, get: function () { return uint32ArrayFrom_1.uint32ArrayFrom; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 86342:
+/***/ 78978:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -469,7 +469,7 @@ exports.isEmptyData = isEmptyData;
 
 /***/ }),
 
-/***/ 88288:
+/***/ 2732:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -490,7 +490,7 @@ exports.numToUint8 = numToUint8;
 
 /***/ }),
 
-/***/ 10605:
+/***/ 35601:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -516,17 +516,17 @@ exports.uint32ArrayFrom = uint32ArrayFrom;
 
 /***/ }),
 
-/***/ 4737:
+/***/ 25478:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.resolveHttpAuthSchemeConfig = exports.defaultS3HttpAuthSchemeProvider = exports.defaultS3HttpAuthSchemeParametersProvider = void 0;
-const core_1 = __webpack_require__(65473);
-const signature_v4_multi_region_1 = __webpack_require__(18497);
-const middleware_endpoint_1 = __webpack_require__(37202);
-const util_middleware_1 = __webpack_require__(96556);
-const endpointResolver_1 = __webpack_require__(73383);
+const core_1 = __webpack_require__(54305);
+const signature_v4_multi_region_1 = __webpack_require__(75237);
+const middleware_endpoint_1 = __webpack_require__(89408);
+const util_middleware_1 = __webpack_require__(27256);
+const endpointResolver_1 = __webpack_require__(12448);
 const createEndpointRuleSetHttpAuthSchemeParametersProvider = (defaultHttpAuthSchemeParametersProvider) => async (config, context, input) => {
     if (!input) {
         throw new Error("Could not find `input` for `defaultEndpointRuleSetHttpAuthSchemeParametersProvider`");
@@ -649,15 +649,15 @@ exports.resolveHttpAuthSchemeConfig = resolveHttpAuthSchemeConfig;
 
 /***/ }),
 
-/***/ 73383:
+/***/ 12448:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.defaultEndpointResolver = void 0;
-const util_endpoints_1 = __webpack_require__(49517);
-const util_endpoints_2 = __webpack_require__(69721);
-const ruleset_1 = __webpack_require__(56532);
+const util_endpoints_1 = __webpack_require__(9856);
+const util_endpoints_2 = __webpack_require__(73277);
+const ruleset_1 = __webpack_require__(73245);
 const cache = new util_endpoints_2.EndpointCache({
     size: 50,
     params: [
@@ -689,7 +689,7 @@ util_endpoints_2.customEndpointFunctions.aws = util_endpoints_1.awsEndpointFunct
 
 /***/ }),
 
-/***/ 56532:
+/***/ 73245:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -703,33 +703,33 @@ exports.ruleSet = _data;
 
 /***/ }),
 
-/***/ 98302:
+/***/ 35093:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var middlewareExpectContinue = __webpack_require__(13131);
-var middlewareFlexibleChecksums = __webpack_require__(93461);
-var middlewareHostHeader = __webpack_require__(97309);
-var middlewareLogger = __webpack_require__(19025);
-var middlewareRecursionDetection = __webpack_require__(18401);
-var middlewareSdkS3 = __webpack_require__(45229);
-var middlewareUserAgent = __webpack_require__(20993);
-var configResolver = __webpack_require__(19532);
-var core = __webpack_require__(29450);
-var schema = __webpack_require__(82722);
-var eventstreamSerdeConfigResolver = __webpack_require__(54609);
-var middlewareContentLength = __webpack_require__(26008);
-var middlewareEndpoint = __webpack_require__(37202);
-var middlewareRetry = __webpack_require__(72337);
-var smithyClient = __webpack_require__(4466);
-var httpAuthSchemeProvider = __webpack_require__(4737);
-var runtimeConfig = __webpack_require__(31504);
-var regionConfigResolver = __webpack_require__(99155);
-var protocolHttp = __webpack_require__(80352);
-var middlewareSsec = __webpack_require__(32221);
-var middlewareLocationConstraint = __webpack_require__(83019);
-var utilWaiter = __webpack_require__(53416);
+var middlewareExpectContinue = __webpack_require__(16978);
+var middlewareFlexibleChecksums = __webpack_require__(4937);
+var middlewareHostHeader = __webpack_require__(18784);
+var middlewareLogger = __webpack_require__(82374);
+var middlewareRecursionDetection = __webpack_require__(94216);
+var middlewareSdkS3 = __webpack_require__(72337);
+var middlewareUserAgent = __webpack_require__(6313);
+var configResolver = __webpack_require__(77536);
+var core = __webpack_require__(91752);
+var schema = __webpack_require__(99448);
+var eventstreamSerdeConfigResolver = __webpack_require__(33357);
+var middlewareContentLength = __webpack_require__(69684);
+var middlewareEndpoint = __webpack_require__(89408);
+var middlewareRetry = __webpack_require__(38915);
+var smithyClient = __webpack_require__(78452);
+var httpAuthSchemeProvider = __webpack_require__(25478);
+var runtimeConfig = __webpack_require__(25791);
+var regionConfigResolver = __webpack_require__(58762);
+var protocolHttp = __webpack_require__(26204);
+var middlewareSsec = __webpack_require__(21806);
+var middlewareLocationConstraint = __webpack_require__(7850);
+var utilWaiter = __webpack_require__(44516);
 
 const resolveClientEndpointParameters = (options) => {
     return Object.assign(options, {
@@ -6378,7 +6378,7 @@ const paginateListParts = core.createPaginator(S3Client, ListPartsCommand, "Part
 const checkState$3 = async (client, input) => {
     let reason;
     try {
-        const result = await client.send(new HeadBucketCommand(input));
+        let result = await client.send(new HeadBucketCommand(input));
         reason = result;
         return { state: utilWaiter.WaiterState.SUCCESS, reason };
     }
@@ -6403,7 +6403,7 @@ const waitUntilBucketExists = async (params, input) => {
 const checkState$2 = async (client, input) => {
     let reason;
     try {
-        const result = await client.send(new HeadBucketCommand(input));
+        let result = await client.send(new HeadBucketCommand(input));
         reason = result;
     }
     catch (exception) {
@@ -6427,7 +6427,7 @@ const waitUntilBucketNotExists = async (params, input) => {
 const checkState$1 = async (client, input) => {
     let reason;
     try {
-        const result = await client.send(new HeadObjectCommand(input));
+        let result = await client.send(new HeadObjectCommand(input));
         reason = result;
         return { state: utilWaiter.WaiterState.SUCCESS, reason };
     }
@@ -6452,7 +6452,7 @@ const waitUntilObjectExists = async (params, input) => {
 const checkState = async (client, input) => {
     let reason;
     try {
-        const result = await client.send(new HeadObjectCommand(input));
+        let result = await client.send(new HeadObjectCommand(input));
         reason = result;
     }
     catch (exception) {
@@ -7542,32 +7542,32 @@ exports.waitUntilObjectNotExists = waitUntilObjectNotExists;
 
 /***/ }),
 
-/***/ 31504:
+/***/ 25791:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getRuntimeConfig = void 0;
-const tslib_1 = __webpack_require__(53824);
-const package_json_1 = tslib_1.__importDefault(__webpack_require__(20146));
-const core_1 = __webpack_require__(65473);
-const credential_provider_node_1 = __webpack_require__(41710);
-const middleware_bucket_endpoint_1 = __webpack_require__(26445);
-const middleware_flexible_checksums_1 = __webpack_require__(93461);
-const middleware_sdk_s3_1 = __webpack_require__(45229);
-const util_user_agent_node_1 = __webpack_require__(16197);
-const config_resolver_1 = __webpack_require__(19532);
-const eventstream_serde_node_1 = __webpack_require__(15830);
-const hash_node_1 = __webpack_require__(5856);
-const hash_stream_node_1 = __webpack_require__(38446);
-const middleware_retry_1 = __webpack_require__(72337);
-const node_config_provider_1 = __webpack_require__(31407);
-const node_http_handler_1 = __webpack_require__(83064);
-const smithy_client_1 = __webpack_require__(4466);
-const util_body_length_node_1 = __webpack_require__(90306);
-const util_defaults_mode_node_1 = __webpack_require__(14053);
-const util_retry_1 = __webpack_require__(4766);
-const runtimeConfig_shared_1 = __webpack_require__(28705);
+const tslib_1 = __webpack_require__(67892);
+const package_json_1 = tslib_1.__importDefault(__webpack_require__(20828));
+const core_1 = __webpack_require__(54305);
+const credential_provider_node_1 = __webpack_require__(14231);
+const middleware_bucket_endpoint_1 = __webpack_require__(57249);
+const middleware_flexible_checksums_1 = __webpack_require__(4937);
+const middleware_sdk_s3_1 = __webpack_require__(72337);
+const util_user_agent_node_1 = __webpack_require__(8277);
+const config_resolver_1 = __webpack_require__(77536);
+const eventstream_serde_node_1 = __webpack_require__(94738);
+const hash_node_1 = __webpack_require__(73180);
+const hash_stream_node_1 = __webpack_require__(8794);
+const middleware_retry_1 = __webpack_require__(38915);
+const node_config_provider_1 = __webpack_require__(21755);
+const node_http_handler_1 = __webpack_require__(66876);
+const smithy_client_1 = __webpack_require__(78452);
+const util_body_length_node_1 = __webpack_require__(47062);
+const util_defaults_mode_node_1 = __webpack_require__(55918);
+const util_retry_1 = __webpack_require__(49274);
+const runtimeConfig_shared_1 = __webpack_require__(70284);
 const getRuntimeConfig = (config) => {
     (0, smithy_client_1.emitWarningIfUnsupportedVersion)(process.version);
     const defaultsMode = (0, util_defaults_mode_node_1.resolveDefaultsModeConfig)(config);
@@ -7616,22 +7616,22 @@ exports.getRuntimeConfig = getRuntimeConfig;
 
 /***/ }),
 
-/***/ 28705:
+/***/ 70284:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getRuntimeConfig = void 0;
-const core_1 = __webpack_require__(65473);
-const protocols_1 = __webpack_require__(19167);
-const signature_v4_multi_region_1 = __webpack_require__(18497);
-const smithy_client_1 = __webpack_require__(4466);
-const url_parser_1 = __webpack_require__(91990);
-const util_base64_1 = __webpack_require__(28552);
-const util_stream_1 = __webpack_require__(51952);
-const util_utf8_1 = __webpack_require__(44855);
-const httpAuthSchemeProvider_1 = __webpack_require__(4737);
-const endpointResolver_1 = __webpack_require__(73383);
+const core_1 = __webpack_require__(54305);
+const protocols_1 = __webpack_require__(18687);
+const signature_v4_multi_region_1 = __webpack_require__(75237);
+const smithy_client_1 = __webpack_require__(78452);
+const url_parser_1 = __webpack_require__(93282);
+const util_base64_1 = __webpack_require__(11532);
+const util_stream_1 = __webpack_require__(77292);
+const util_utf8_1 = __webpack_require__(75579);
+const httpAuthSchemeProvider_1 = __webpack_require__(25478);
+const endpointResolver_1 = __webpack_require__(12448);
 const getRuntimeConfig = (config) => {
     return {
         apiVersion: "2006-03-01",
@@ -7677,24 +7677,24 @@ exports.getRuntimeConfig = getRuntimeConfig;
 
 /***/ }),
 
-/***/ 65473:
+/***/ 54305:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var protocolHttp = __webpack_require__(80352);
-var core = __webpack_require__(29450);
-var propertyProvider = __webpack_require__(94476);
-var client = __webpack_require__(80073);
-var signatureV4 = __webpack_require__(3062);
-var cbor = __webpack_require__(11437);
-var schema = __webpack_require__(82722);
-var smithyClient = __webpack_require__(4466);
-var protocols = __webpack_require__(53622);
-var serde = __webpack_require__(13270);
-var utilBase64 = __webpack_require__(28552);
-var utilUtf8 = __webpack_require__(44855);
-var xmlBuilder = __webpack_require__(87265);
+var protocolHttp = __webpack_require__(26204);
+var core = __webpack_require__(91752);
+var propertyProvider = __webpack_require__(94200);
+var client = __webpack_require__(77705);
+var signatureV4 = __webpack_require__(9922);
+var cbor = __webpack_require__(66555);
+var schema = __webpack_require__(99448);
+var smithyClient = __webpack_require__(78452);
+var protocols = __webpack_require__(84400);
+var serde = __webpack_require__(94632);
+var utilBase64 = __webpack_require__(11532);
+var utilUtf8 = __webpack_require__(75579);
+var xmlBuilder = __webpack_require__(42658);
 
 const state = {
     warningEmitted: false,
@@ -7908,7 +7908,15 @@ const resolveAwsSdkSigV4Config = (config) => {
             });
             const boundProvider = bindCallerConfig(config, memoizedProvider);
             if (isUserSupplied && !boundProvider.attributed) {
-                resolvedCredentials = async (options) => boundProvider(options).then((creds) => client.setCredentialFeature(creds, "CREDENTIALS_CODE", "e"));
+                const isCredentialObject = typeof inputCredentials === "object" && inputCredentials !== null;
+                resolvedCredentials = async (options) => {
+                    const creds = await boundProvider(options);
+                    const attributedCreds = creds;
+                    if (isCredentialObject && (!attributedCreds.$source || Object.keys(attributedCreds.$source).length === 0)) {
+                        return client.setCredentialFeature(attributedCreds, "CREDENTIALS_CODE", "e");
+                    }
+                    return attributedCreds;
+                };
                 resolvedCredentials.memoized = boundProvider.memoized;
                 resolvedCredentials.configBound = boundProvider.configBound;
                 resolvedCredentials.attributed = true;
@@ -9877,7 +9885,7 @@ exports.validateSigningProperties = validateSigningProperties;
 
 /***/ }),
 
-/***/ 80073:
+/***/ 77705:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -9935,19 +9943,19 @@ exports.state = state;
 
 /***/ }),
 
-/***/ 19167:
+/***/ 18687:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var cbor = __webpack_require__(11437);
-var schema = __webpack_require__(82722);
-var smithyClient = __webpack_require__(4466);
-var protocols = __webpack_require__(53622);
-var serde = __webpack_require__(13270);
-var utilBase64 = __webpack_require__(28552);
-var utilUtf8 = __webpack_require__(44855);
-var xmlBuilder = __webpack_require__(87265);
+var cbor = __webpack_require__(66555);
+var schema = __webpack_require__(99448);
+var smithyClient = __webpack_require__(78452);
+var protocols = __webpack_require__(84400);
+var serde = __webpack_require__(94632);
+var utilBase64 = __webpack_require__(11532);
+var utilUtf8 = __webpack_require__(75579);
+var xmlBuilder = __webpack_require__(42658);
 
 class ProtocolLib {
     queryCompat;
@@ -11790,7 +11798,7 @@ exports.parseXmlErrorBody = parseXmlErrorBody;
 
 /***/ }),
 
-/***/ 77349:
+/***/ 33660:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -11898,13 +11906,13 @@ exports.crc64NvmeCrtContainer = crc64NvmeCrtContainer;
 
 /***/ }),
 
-/***/ 94925:
+/***/ 5005:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var client = __webpack_require__(80073);
-var propertyProvider = __webpack_require__(94476);
+var client = __webpack_require__(77705);
+var propertyProvider = __webpack_require__(94200);
 
 const ENV_KEY = "AWS_ACCESS_KEY_ID";
 const ENV_SECRET = "AWS_SECRET_ACCESS_KEY";
@@ -11946,21 +11954,21 @@ exports.fromEnv = fromEnv;
 
 /***/ }),
 
-/***/ 41710:
+/***/ 14231:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var credentialProviderEnv = __webpack_require__(94925);
-var propertyProvider = __webpack_require__(94476);
-var sharedIniFileLoader = __webpack_require__(83353);
+var credentialProviderEnv = __webpack_require__(5005);
+var propertyProvider = __webpack_require__(94200);
+var sharedIniFileLoader = __webpack_require__(35285);
 
 const ENV_IMDS_DISABLED = "AWS_EC2_METADATA_DISABLED";
 const remoteProvider = async (init) => {
-    const { ENV_CMDS_FULL_URI, ENV_CMDS_RELATIVE_URI, fromContainerMetadata, fromInstanceMetadata } = await __webpack_require__.e(/* import() */ 402).then(__webpack_require__.t.bind(__webpack_require__, 70402, 19));
+    const { ENV_CMDS_FULL_URI, ENV_CMDS_RELATIVE_URI, fromContainerMetadata, fromInstanceMetadata } = await __webpack_require__.e(/* import() */ 950).then(__webpack_require__.t.bind(__webpack_require__, 89950, 19));
     if (process.env[ENV_CMDS_RELATIVE_URI] || process.env[ENV_CMDS_FULL_URI]) {
         init.logger?.debug("@aws-sdk/credential-provider-node - remoteProvider::fromHttp/fromContainerMetadata");
-        const { fromHttp } = await __webpack_require__.e(/* import() */ 915).then(__webpack_require__.bind(__webpack_require__, 46915));
+        const { fromHttp } = await __webpack_require__.e(/* import() */ 875).then(__webpack_require__.bind(__webpack_require__, 50875));
         return propertyProvider.chain(fromHttp(init), fromContainerMetadata(init));
     }
     if (process.env[ENV_IMDS_DISABLED] && process.env[ENV_IMDS_DISABLED] !== "false") {
@@ -12064,22 +12072,22 @@ const defaultProvider = (init = {}) => memoizeChain([
         if (!ssoStartUrl && !ssoAccountId && !ssoRegion && !ssoRoleName && !ssoSession) {
             throw new propertyProvider.CredentialsProviderError("Skipping SSO provider in default chain (inputs do not include SSO fields).", { logger: init.logger });
         }
-        const { fromSSO } = await __webpack_require__.e(/* import() */ 870).then(__webpack_require__.t.bind(__webpack_require__, 57870, 19));
+        const { fromSSO } = await __webpack_require__.e(/* import() */ 177).then(__webpack_require__.t.bind(__webpack_require__, 17177, 19));
         return fromSSO(init)(awsIdentityProperties);
     },
     async (awsIdentityProperties) => {
         init.logger?.debug("@aws-sdk/credential-provider-node - defaultProvider::fromIni");
-        const { fromIni } = await __webpack_require__.e(/* import() */ 694).then(__webpack_require__.t.bind(__webpack_require__, 6694, 19));
+        const { fromIni } = await __webpack_require__.e(/* import() */ 893).then(__webpack_require__.t.bind(__webpack_require__, 73893, 19));
         return fromIni(init)(awsIdentityProperties);
     },
     async (awsIdentityProperties) => {
         init.logger?.debug("@aws-sdk/credential-provider-node - defaultProvider::fromProcess");
-        const { fromProcess } = await __webpack_require__.e(/* import() */ 2).then(__webpack_require__.t.bind(__webpack_require__, 75621, 19));
+        const { fromProcess } = await __webpack_require__.e(/* import() */ 17).then(__webpack_require__.t.bind(__webpack_require__, 41017, 19));
         return fromProcess(init)(awsIdentityProperties);
     },
     async (awsIdentityProperties) => {
         init.logger?.debug("@aws-sdk/credential-provider-node - defaultProvider::fromTokenFile");
-        const { fromTokenFile } = await __webpack_require__.e(/* import() */ 776).then(__webpack_require__.t.bind(__webpack_require__, 27776, 23));
+        const { fromTokenFile } = await __webpack_require__.e(/* import() */ 469).then(__webpack_require__.t.bind(__webpack_require__, 55469, 23));
         return fromTokenFile(init)(awsIdentityProperties);
     },
     async () => {
@@ -12103,18 +12111,18 @@ exports.defaultProvider = defaultProvider;
 
 /***/ }),
 
-/***/ 73673:
+/***/ 12583:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var clientS3 = __webpack_require__(98302);
-var abortController = __webpack_require__(73742);
-var middlewareEndpoint = __webpack_require__(37202);
-var smithyClient = __webpack_require__(4466);
+var clientS3 = __webpack_require__(35093);
+var abortController = __webpack_require__(91482);
+var middlewareEndpoint = __webpack_require__(89408);
+var smithyClient = __webpack_require__(78452);
 var events = __webpack_require__(24434);
 var buffer = __webpack_require__(20181);
-var runtimeConfig = __webpack_require__(48995);
+var runtimeConfig = __webpack_require__(86153);
 var stream = __webpack_require__(2203);
 
 const byteLength = (input) => {
@@ -12622,14 +12630,14 @@ exports.Upload = Upload;
 
 /***/ }),
 
-/***/ 48995:
+/***/ 86153:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.runtimeConfig = void 0;
 const fs_1 = __webpack_require__(79896);
-const runtimeConfig_shared_1 = __webpack_require__(22912);
+const runtimeConfig_shared_1 = __webpack_require__(52302);
 exports.runtimeConfig = {
     ...runtimeConfig_shared_1.runtimeConfigShared,
     runtime: "node",
@@ -12642,7 +12650,7 @@ exports.runtimeConfig = {
 
 /***/ }),
 
-/***/ 22912:
+/***/ 52302:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -12658,14 +12666,14 @@ exports.runtimeConfigShared = {
 
 /***/ }),
 
-/***/ 26445:
+/***/ 57249:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var utilConfigProvider = __webpack_require__(82005);
-var utilArnParser = __webpack_require__(48397);
-var protocolHttp = __webpack_require__(80352);
+var utilConfigProvider = __webpack_require__(25897);
+var utilArnParser = __webpack_require__(26545);
+var protocolHttp = __webpack_require__(26204);
 
 const NODE_DISABLE_MULTIREGION_ACCESS_POINT_ENV_NAME = "AWS_S3_DISABLE_MULTIREGION_ACCESS_POINTS";
 const NODE_DISABLE_MULTIREGION_ACCESS_POINT_INI_NAME = "s3_disable_multiregion_access_points";
@@ -13017,12 +13025,12 @@ exports.validateRegion = validateRegion;
 
 /***/ }),
 
-/***/ 13131:
+/***/ 16978:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var protocolHttp = __webpack_require__(80352);
+var protocolHttp = __webpack_require__(26204);
 
 function addExpectContinueMiddleware(options) {
     return (next) => async (args) => {
@@ -13072,15 +13080,15 @@ exports.getAddExpectContinuePlugin = getAddExpectContinuePlugin;
 
 /***/ }),
 
-/***/ 40768:
+/***/ 15063:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getCrc32ChecksumAlgorithmFunction = void 0;
-const tslib_1 = __webpack_require__(53824);
-const crc32_1 = __webpack_require__(14123);
-const util_1 = __webpack_require__(71255);
+const tslib_1 = __webpack_require__(67892);
+const crc32_1 = __webpack_require__(79479);
+const util_1 = __webpack_require__(9267);
 const zlib = tslib_1.__importStar(__webpack_require__(43106));
 class NodeCrc32 {
     checksum = 0;
@@ -13105,20 +13113,20 @@ exports.getCrc32ChecksumAlgorithmFunction = getCrc32ChecksumAlgorithmFunction;
 
 /***/ }),
 
-/***/ 93461:
+/***/ 4937:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var core = __webpack_require__(65473);
-var protocolHttp = __webpack_require__(80352);
-var utilStream = __webpack_require__(51952);
-var isArrayBuffer = __webpack_require__(15493);
-var crc32c = __webpack_require__(11219);
-var crc64Nvme = __webpack_require__(77349);
-var getCrc32ChecksumAlgorithmFunction = __webpack_require__(40768);
-var utilUtf8 = __webpack_require__(44855);
-var utilMiddleware = __webpack_require__(96556);
+var core = __webpack_require__(54305);
+var protocolHttp = __webpack_require__(26204);
+var utilStream = __webpack_require__(77292);
+var isArrayBuffer = __webpack_require__(73273);
+var crc32c = __webpack_require__(89839);
+var crc64Nvme = __webpack_require__(33660);
+var getCrc32ChecksumAlgorithmFunction = __webpack_require__(15063);
+var utilUtf8 = __webpack_require__(75579);
+var utilMiddleware = __webpack_require__(27256);
 
 const RequestChecksumCalculation = {
     WHEN_SUPPORTED: "WHEN_SUPPORTED",
@@ -13548,12 +13556,12 @@ exports.resolveFlexibleChecksumsConfig = resolveFlexibleChecksumsConfig;
 
 /***/ }),
 
-/***/ 97309:
+/***/ 18784:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var protocolHttp = __webpack_require__(80352);
+var protocolHttp = __webpack_require__(26204);
 
 function resolveHostHeaderConfig(input) {
     return input;
@@ -13596,7 +13604,7 @@ exports.resolveHostHeaderConfig = resolveHostHeaderConfig;
 
 /***/ }),
 
-/***/ 83019:
+/***/ 7850:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -13633,7 +13641,7 @@ exports.locationConstraintMiddlewareOptions = locationConstraintMiddlewareOption
 
 /***/ }),
 
-/***/ 19025:
+/***/ 82374:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -13688,12 +13696,12 @@ exports.loggerMiddlewareOptions = loggerMiddlewareOptions;
 
 /***/ }),
 
-/***/ 18401:
+/***/ 94216:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var recursionDetectionMiddleware = __webpack_require__(84197);
+var recursionDetectionMiddleware = __webpack_require__(20241);
 
 const recursionDetectionMiddlewareOptions = {
     step: "build",
@@ -13720,14 +13728,14 @@ Object.keys(recursionDetectionMiddleware).forEach(function (k) {
 
 /***/ }),
 
-/***/ 84197:
+/***/ 20241:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.recursionDetectionMiddleware = void 0;
-const lambda_invoke_store_1 = __webpack_require__(59499);
-const protocol_http_1 = __webpack_require__(80352);
+const lambda_invoke_store_1 = __webpack_require__(63320);
+const protocol_http_1 = __webpack_require__(26204);
 const TRACE_ID_HEADER_NAME = "X-Amzn-Trace-Id";
 const ENV_LAMBDA_FUNCTION_NAME = "AWS_LAMBDA_FUNCTION_NAME";
 const ENV_TRACE_ID = "_X_AMZN_TRACE_ID";
@@ -13760,21 +13768,21 @@ exports.recursionDetectionMiddleware = recursionDetectionMiddleware;
 
 /***/ }),
 
-/***/ 45229:
+/***/ 72337:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var protocolHttp = __webpack_require__(80352);
-var smithyClient = __webpack_require__(4466);
-var utilStream = __webpack_require__(51952);
-var utilArnParser = __webpack_require__(48397);
-var signatureV4 = __webpack_require__(3062);
-var utilConfigProvider = __webpack_require__(82005);
-var core = __webpack_require__(65473);
-var core$1 = __webpack_require__(29450);
-__webpack_require__(59323);
-var utilMiddleware = __webpack_require__(96556);
+var protocolHttp = __webpack_require__(26204);
+var smithyClient = __webpack_require__(78452);
+var utilStream = __webpack_require__(77292);
+var utilArnParser = __webpack_require__(26545);
+var signatureV4 = __webpack_require__(9922);
+var utilConfigProvider = __webpack_require__(25897);
+var core = __webpack_require__(54305);
+var core$1 = __webpack_require__(91752);
+__webpack_require__(92807);
+var utilMiddleware = __webpack_require__(27256);
 
 const CONTENT_LENGTH_HEADER = "content-length";
 const DECODED_CONTENT_LENGTH_HEADER = "x-amz-decoded-content-length";
@@ -14338,7 +14346,7 @@ exports.validateBucketNameMiddlewareOptions = validateBucketNameMiddlewareOption
 
 /***/ }),
 
-/***/ 32221:
+/***/ 21806:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -14418,15 +14426,15 @@ exports.ssecMiddlewareOptions = ssecMiddlewareOptions;
 
 /***/ }),
 
-/***/ 20993:
+/***/ 6313:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var core = __webpack_require__(29450);
-var utilEndpoints = __webpack_require__(49517);
-var protocolHttp = __webpack_require__(80352);
-var core$1 = __webpack_require__(65473);
+var core = __webpack_require__(91752);
+var utilEndpoints = __webpack_require__(9856);
+var protocolHttp = __webpack_require__(26204);
+var core$1 = __webpack_require__(54305);
 
 const DEFAULT_UA_APP_ID = undefined;
 function isValidUserAgentAppId(appId) {
@@ -14619,13 +14627,13 @@ exports.userAgentMiddleware = userAgentMiddleware;
 
 /***/ }),
 
-/***/ 99155:
+/***/ 58762:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var stsRegionDefaultResolver = __webpack_require__(44647);
-var configResolver = __webpack_require__(19532);
+var stsRegionDefaultResolver = __webpack_require__(15702);
+var configResolver = __webpack_require__(77536);
 
 const getAwsRegionExtensionConfiguration = (runtimeConfig) => {
     return {
@@ -14675,15 +14683,15 @@ Object.keys(stsRegionDefaultResolver).forEach(function (k) {
 
 /***/ }),
 
-/***/ 44647:
+/***/ 15702:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.warning = void 0;
 exports.stsRegionDefaultResolver = stsRegionDefaultResolver;
-const config_resolver_1 = __webpack_require__(19532);
-const node_config_provider_1 = __webpack_require__(31407);
+const config_resolver_1 = __webpack_require__(77536);
+const node_config_provider_1 = __webpack_require__(21755);
 function stsRegionDefaultResolver(loaderConfig = {}) {
     return (0, node_config_provider_1.loadConfig)({
         ...config_resolver_1.NODE_REGION_CONFIG_OPTIONS,
@@ -14702,13 +14710,13 @@ exports.warning = {
 
 /***/ }),
 
-/***/ 18497:
+/***/ 75237:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var middlewareSdkS3 = __webpack_require__(45229);
-var signatureV4 = __webpack_require__(3062);
+var middlewareSdkS3 = __webpack_require__(72337);
+var signatureV4 = __webpack_require__(9922);
 
 const signatureV4CrtContainer = {
     CrtSignerV4: null,
@@ -14830,7 +14838,7 @@ exports.signatureV4CrtContainer = signatureV4CrtContainer;
 
 /***/ }),
 
-/***/ 48397:
+/***/ 26545:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -14864,13 +14872,13 @@ exports.validate = validate;
 
 /***/ }),
 
-/***/ 49517:
+/***/ 9856:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var utilEndpoints = __webpack_require__(69721);
-var urlParser = __webpack_require__(91990);
+var utilEndpoints = __webpack_require__(73277);
+var urlParser = __webpack_require__(93282);
 
 const isVirtualHostableS3Bucket = (value, allowSubDomains = false) => {
     if (allowSubDomains) {
@@ -15286,14 +15294,14 @@ exports.useDefaultPartitionInfo = useDefaultPartitionInfo;
 
 /***/ }),
 
-/***/ 16197:
+/***/ 8277:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
 var os = __webpack_require__(70857);
 var process = __webpack_require__(932);
-var middlewareUserAgent = __webpack_require__(20993);
+var middlewareUserAgent = __webpack_require__(6313);
 
 const crtAvailability = {
     isCrtAvailable: false,
@@ -15351,12 +15359,12 @@ exports.defaultUserAgent = defaultUserAgent;
 
 /***/ }),
 
-/***/ 87265:
+/***/ 42658:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var xmlParser = __webpack_require__(76938);
+var xmlParser = __webpack_require__(85519);
 
 function escapeAttribute(value) {
     return value.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -15482,13 +15490,13 @@ exports.XmlText = XmlText;
 
 /***/ }),
 
-/***/ 76938:
+/***/ 85519:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.parseXML = parseXML;
-const fast_xml_parser_1 = __webpack_require__(89106);
+const fast_xml_parser_1 = __webpack_require__(61142);
 const parser = new fast_xml_parser_1.XMLParser({
     attributeNamePrefix: "",
     htmlEntities: true,
@@ -15507,7 +15515,7 @@ function parseXML(xmlString) {
 
 /***/ }),
 
-/***/ 73742:
+/***/ 91482:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -15546,14 +15554,14 @@ exports.AbortSignal = AbortSignal;
 
 /***/ }),
 
-/***/ 19532:
+/***/ 77536:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var utilConfigProvider = __webpack_require__(82005);
-var utilMiddleware = __webpack_require__(96556);
-var utilEndpoints = __webpack_require__(69721);
+var utilConfigProvider = __webpack_require__(25897);
+var utilMiddleware = __webpack_require__(27256);
+var utilEndpoints = __webpack_require__(73277);
 
 const ENV_USE_DUALSTACK_ENDPOINT = "AWS_USE_DUALSTACK_ENDPOINT";
 const CONFIG_USE_DUALSTACK_ENDPOINT = "use_dualstack_endpoint";
@@ -15739,16 +15747,16 @@ exports.resolveRegionConfig = resolveRegionConfig;
 
 /***/ }),
 
-/***/ 29450:
+/***/ 91752:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var types = __webpack_require__(59323);
-var utilMiddleware = __webpack_require__(96556);
-var middlewareSerde = __webpack_require__(1457);
-var protocolHttp = __webpack_require__(80352);
-var protocols = __webpack_require__(53622);
+var types = __webpack_require__(92807);
+var utilMiddleware = __webpack_require__(27256);
+var middlewareSerde = __webpack_require__(22021);
+var protocolHttp = __webpack_require__(26204);
+var protocols = __webpack_require__(84400);
 
 const getSmithyContext = (context) => context[types.SMITHY_CONTEXT_KEY] || (context[types.SMITHY_CONTEXT_KEY] = {});
 
@@ -16095,19 +16103,19 @@ exports.setFeature = setFeature;
 
 /***/ }),
 
-/***/ 11437:
+/***/ 66555:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var serde = __webpack_require__(13270);
-var utilUtf8 = __webpack_require__(44855);
-var protocols = __webpack_require__(53622);
-var protocolHttp = __webpack_require__(80352);
-var utilBodyLengthBrowser = __webpack_require__(29633);
-var schema = __webpack_require__(82722);
-var utilMiddleware = __webpack_require__(96556);
-var utilBase64 = __webpack_require__(28552);
+var serde = __webpack_require__(94632);
+var utilUtf8 = __webpack_require__(75579);
+var protocols = __webpack_require__(84400);
+var protocolHttp = __webpack_require__(26204);
+var utilBodyLengthBrowser = __webpack_require__(88773);
+var schema = __webpack_require__(99448);
+var utilMiddleware = __webpack_require__(27256);
+var utilBase64 = __webpack_require__(11532);
 
 const majorUint64 = 0;
 const majorNegativeInt64 = 1;
@@ -17058,6 +17066,9 @@ class CborShapeDeserializer extends protocols.SerdeContext {
                     newObject.$unknown = [k, value[k]];
                 }
             }
+            else if (value instanceof serde.NumericValue) {
+                return value;
+            }
             return newObject;
         }
         else {
@@ -17175,17 +17186,17 @@ exports.tagSymbol = tagSymbol;
 
 /***/ }),
 
-/***/ 53622:
+/***/ 84400:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var utilStream = __webpack_require__(51952);
-var schema = __webpack_require__(82722);
-var serde = __webpack_require__(13270);
-var protocolHttp = __webpack_require__(80352);
-var utilBase64 = __webpack_require__(28552);
-var utilUtf8 = __webpack_require__(44855);
+var utilStream = __webpack_require__(77292);
+var schema = __webpack_require__(99448);
+var serde = __webpack_require__(94632);
+var protocolHttp = __webpack_require__(26204);
+var utilBase64 = __webpack_require__(11532);
+var utilUtf8 = __webpack_require__(75579);
 
 const collectBody = async (streamBody = new Uint8Array(), context) => {
     if (streamBody instanceof Uint8Array) {
@@ -17260,6 +17271,9 @@ class HttpProtocol extends SerdeContext {
         }
     }
     setHostPrefix(request, operationSchema, input) {
+        if (this.serdeContext?.disableHostPrefix) {
+            return;
+        }
         const inputNs = schema.NormalizedSchema.of(operationSchema.input);
         const opTraits = schema.translateTraits(operationSchema.traits ?? {});
         if (opTraits.endpoint) {
@@ -17302,7 +17316,7 @@ class HttpProtocol extends SerdeContext {
         });
     }
     async loadEventStreamCapability() {
-        const { EventStreamSerde } = await __webpack_require__.e(/* import() */ 531).then(__webpack_require__.t.bind(__webpack_require__, 61531, 19));
+        const { EventStreamSerde } = await __webpack_require__.e(/* import() */ 905).then(__webpack_require__.t.bind(__webpack_require__, 97905, 19));
         return new EventStreamSerde({
             marshaller: this.getEventStreamMarshaller(),
             serializer: this.serializer,
@@ -18021,13 +18035,13 @@ exports.resolvedPath = resolvedPath;
 
 /***/ }),
 
-/***/ 82722:
+/***/ 99448:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var protocolHttp = __webpack_require__(80352);
-var utilMiddleware = __webpack_require__(96556);
+var protocolHttp = __webpack_require__(26204);
+var utilMiddleware = __webpack_require__(27256);
 
 const deref = (schemaRef) => {
     if (typeof schemaRef === "function") {
@@ -18654,12 +18668,12 @@ exports.translateTraits = translateTraits;
 
 /***/ }),
 
-/***/ 13270:
+/***/ 94632:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var uuid = __webpack_require__(2035);
+var uuid = __webpack_require__(77919);
 
 const copyDocumentWithTransform = (source, schemaRef, transform = (_) => _) => source;
 
@@ -19358,13 +19372,13 @@ exports.strictParseShort = strictParseShort;
 
 /***/ }),
 
-/***/ 19368:
+/***/ 18164:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var crc32 = __webpack_require__(14123);
-var utilHexEncoding = __webpack_require__(58835);
+var crc32 = __webpack_require__(79479);
+var utilHexEncoding = __webpack_require__(76999);
 
 class Int64 {
     bytes;
@@ -19753,7 +19767,7 @@ exports.SmithyMessageEncoderStream = SmithyMessageEncoderStream;
 
 /***/ }),
 
-/***/ 54609:
+/***/ 33357:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -19767,12 +19781,12 @@ exports.resolveEventStreamSerdeConfig = resolveEventStreamSerdeConfig;
 
 /***/ }),
 
-/***/ 15830:
+/***/ 94738:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var eventstreamSerdeUniversal = __webpack_require__(58258);
+var eventstreamSerdeUniversal = __webpack_require__(46590);
 var stream = __webpack_require__(2203);
 
 async function* readabletoIterable(readStream) {
@@ -19827,12 +19841,12 @@ exports.eventStreamSerdeProvider = eventStreamSerdeProvider;
 
 /***/ }),
 
-/***/ 58258:
+/***/ 46590:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var eventstreamCodec = __webpack_require__(19368);
+var eventstreamCodec = __webpack_require__(18164);
 
 function getChunkedStream(source) {
     let currentMessageTotalLength = 0;
@@ -19966,14 +19980,14 @@ exports.eventStreamSerdeProvider = eventStreamSerdeProvider;
 
 /***/ }),
 
-/***/ 60321:
+/***/ 40725:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var protocolHttp = __webpack_require__(80352);
-var querystringBuilder = __webpack_require__(98932);
-var utilBase64 = __webpack_require__(28552);
+var protocolHttp = __webpack_require__(26204);
+var querystringBuilder = __webpack_require__(46416);
+var utilBase64 = __webpack_require__(11532);
 
 function createRequest(url, requestOptions) {
     return new Request(url, requestOptions);
@@ -20189,13 +20203,13 @@ exports.streamCollector = streamCollector;
 
 /***/ }),
 
-/***/ 5856:
+/***/ 73180:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var utilBufferFrom = __webpack_require__(9081);
-var utilUtf8 = __webpack_require__(44855);
+var utilBufferFrom = __webpack_require__(94845);
+var utilUtf8 = __webpack_require__(75579);
 var buffer = __webpack_require__(20181);
 var crypto = __webpack_require__(76982);
 
@@ -20238,13 +20252,13 @@ exports.Hash = Hash;
 
 /***/ }),
 
-/***/ 38446:
+/***/ 8794:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
 var fs = __webpack_require__(79896);
-var utilUtf8 = __webpack_require__(44855);
+var utilUtf8 = __webpack_require__(75579);
 var stream = __webpack_require__(2203);
 
 class HashCalculator extends stream.Writable {
@@ -20312,7 +20326,7 @@ exports.readableStreamHasher = readableStreamHasher;
 
 /***/ }),
 
-/***/ 1767:
+/***/ 17843:
 /***/ ((module) => {
 
 var __defProp = Object.defineProperty;
@@ -20349,7 +20363,7 @@ var isArrayBuffer = /* @__PURE__ */ __name((arg) => typeof ArrayBuffer === "func
 
 /***/ }),
 
-/***/ 15493:
+/***/ 73273:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -20362,12 +20376,12 @@ exports.isArrayBuffer = isArrayBuffer;
 
 /***/ }),
 
-/***/ 26008:
+/***/ 69684:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var protocolHttp = __webpack_require__(80352);
+var protocolHttp = __webpack_require__(26204);
 
 const CONTENT_LENGTH_HEADER = "content-length";
 function contentLengthMiddleware(bodyLengthChecker) {
@@ -20415,27 +20429,27 @@ exports.getContentLengthPlugin = getContentLengthPlugin;
 
 /***/ }),
 
-/***/ 3494:
+/***/ 46108:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getEndpointFromConfig = void 0;
-const node_config_provider_1 = __webpack_require__(31407);
-const getEndpointUrlConfig_1 = __webpack_require__(89853);
+const node_config_provider_1 = __webpack_require__(21755);
+const getEndpointUrlConfig_1 = __webpack_require__(91039);
 const getEndpointFromConfig = async (serviceId) => (0, node_config_provider_1.loadConfig)((0, getEndpointUrlConfig_1.getEndpointUrlConfig)(serviceId ?? ""))();
 exports.getEndpointFromConfig = getEndpointFromConfig;
 
 
 /***/ }),
 
-/***/ 89853:
+/***/ 91039:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getEndpointUrlConfig = void 0;
-const shared_ini_file_loader_1 = __webpack_require__(83353);
+const shared_ini_file_loader_1 = __webpack_require__(35285);
 const ENV_ENDPOINT_URL = "AWS_ENDPOINT_URL";
 const CONFIG_ENDPOINT_URL = "endpoint_url";
 const getEndpointUrlConfig = (serviceId) => ({
@@ -20471,16 +20485,16 @@ exports.getEndpointUrlConfig = getEndpointUrlConfig;
 
 /***/ }),
 
-/***/ 37202:
+/***/ 89408:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var getEndpointFromConfig = __webpack_require__(3494);
-var urlParser = __webpack_require__(91990);
-var core = __webpack_require__(29450);
-var utilMiddleware = __webpack_require__(96556);
-var middlewareSerde = __webpack_require__(1457);
+var getEndpointFromConfig = __webpack_require__(46108);
+var urlParser = __webpack_require__(93282);
+var core = __webpack_require__(91752);
+var utilMiddleware = __webpack_require__(27256);
+var middlewareSerde = __webpack_require__(22021);
 
 const resolveParamsForS3 = async (endpointParams) => {
     const bucket = endpointParams?.Bucket || "";
@@ -20726,18 +20740,18 @@ exports.toEndpointV1 = toEndpointV1;
 
 /***/ }),
 
-/***/ 72337:
+/***/ 38915:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var utilRetry = __webpack_require__(4766);
-var protocolHttp = __webpack_require__(80352);
-var serviceErrorClassification = __webpack_require__(84330);
-var uuid = __webpack_require__(2035);
-var utilMiddleware = __webpack_require__(96556);
-var smithyClient = __webpack_require__(4466);
-var isStreamingPayload = __webpack_require__(32568);
+var utilRetry = __webpack_require__(49274);
+var protocolHttp = __webpack_require__(26204);
+var serviceErrorClassification = __webpack_require__(40854);
+var uuid = __webpack_require__(77919);
+var utilMiddleware = __webpack_require__(27256);
+var smithyClient = __webpack_require__(78452);
+var isStreamingPayload = __webpack_require__(9818);
 
 const getDefaultRetryQuota = (initialRetryTokens, options) => {
     const MAX_CAPACITY = initialRetryTokens;
@@ -21091,7 +21105,7 @@ exports.retryMiddlewareOptions = retryMiddlewareOptions;
 
 /***/ }),
 
-/***/ 32568:
+/***/ 9818:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
@@ -21105,12 +21119,12 @@ exports.isStreamingPayload = isStreamingPayload;
 
 /***/ }),
 
-/***/ 1457:
+/***/ 22021:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var protocolHttp = __webpack_require__(80352);
+var protocolHttp = __webpack_require__(26204);
 
 const deserializerMiddleware = (options, deserializer) => (next, context) => async (args) => {
     const { response } = await next(args);
@@ -21215,7 +21229,7 @@ exports.serializerMiddlewareOption = serializerMiddlewareOption;
 
 /***/ }),
 
-/***/ 43226:
+/***/ 39846:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -21507,13 +21521,13 @@ exports.constructStack = constructStack;
 
 /***/ }),
 
-/***/ 31407:
+/***/ 21755:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var propertyProvider = __webpack_require__(94476);
-var sharedIniFileLoader = __webpack_require__(83353);
+var propertyProvider = __webpack_require__(94200);
+var sharedIniFileLoader = __webpack_require__(35285);
 
 function getSelectorName(functionString) {
     try {
@@ -21576,13 +21590,13 @@ exports.loadConfig = loadConfig;
 
 /***/ }),
 
-/***/ 83064:
+/***/ 66876:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var protocolHttp = __webpack_require__(80352);
-var querystringBuilder = __webpack_require__(98932);
+var protocolHttp = __webpack_require__(26204);
+var querystringBuilder = __webpack_require__(46416);
 var http = __webpack_require__(58611);
 var https = __webpack_require__(65692);
 var stream = __webpack_require__(2203);
@@ -22315,7 +22329,7 @@ exports.streamCollector = streamCollector;
 
 /***/ }),
 
-/***/ 94476:
+/***/ 94200:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -22439,12 +22453,12 @@ exports.memoize = memoize;
 
 /***/ }),
 
-/***/ 80352:
+/***/ 26204:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var types = __webpack_require__(59323);
+var types = __webpack_require__(92807);
 
 const getHttpHandlerExtensionConfiguration = (runtimeConfig) => {
     return {
@@ -22615,12 +22629,12 @@ exports.resolveHttpHandlerRuntimeConfig = resolveHttpHandlerRuntimeConfig;
 
 /***/ }),
 
-/***/ 98932:
+/***/ 46416:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var utilUriEscape = __webpack_require__(60637);
+var utilUriEscape = __webpack_require__(35009);
 
 function buildQueryString(query) {
     const parts = [];
@@ -22648,7 +22662,7 @@ exports.buildQueryString = buildQueryString;
 
 /***/ }),
 
-/***/ 71434:
+/***/ 68182:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -22682,7 +22696,7 @@ exports.parseQueryString = parseQueryString;
 
 /***/ }),
 
-/***/ 84330:
+/***/ 40854:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -22766,7 +22780,7 @@ exports.isTransientError = isTransientError;
 
 /***/ }),
 
-/***/ 87487:
+/***/ 78067:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
@@ -22799,7 +22813,7 @@ exports.getHomeDir = getHomeDir;
 
 /***/ }),
 
-/***/ 57436:
+/***/ 13088:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
@@ -22807,7 +22821,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getSSOTokenFilepath = void 0;
 const crypto_1 = __webpack_require__(76982);
 const path_1 = __webpack_require__(16928);
-const getHomeDir_1 = __webpack_require__(87487);
+const getHomeDir_1 = __webpack_require__(78067);
 const getSSOTokenFilepath = (id) => {
     const hasher = (0, crypto_1.createHash)("sha1");
     const cacheName = hasher.update(id).digest("hex");
@@ -22818,14 +22832,14 @@ exports.getSSOTokenFilepath = getSSOTokenFilepath;
 
 /***/ }),
 
-/***/ 12563:
+/***/ 40455:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getSSOTokenFromFile = exports.tokenIntercept = void 0;
 const promises_1 = __webpack_require__(91943);
-const getSSOTokenFilepath_1 = __webpack_require__(57436);
+const getSSOTokenFilepath_1 = __webpack_require__(13088);
 exports.tokenIntercept = {};
 const getSSOTokenFromFile = async (id) => {
     if (exports.tokenIntercept[id]) {
@@ -22840,17 +22854,17 @@ exports.getSSOTokenFromFile = getSSOTokenFromFile;
 
 /***/ }),
 
-/***/ 83353:
+/***/ 35285:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var getHomeDir = __webpack_require__(87487);
-var getSSOTokenFilepath = __webpack_require__(57436);
-var getSSOTokenFromFile = __webpack_require__(12563);
+var getHomeDir = __webpack_require__(78067);
+var getSSOTokenFilepath = __webpack_require__(13088);
+var getSSOTokenFromFile = __webpack_require__(40455);
 var path = __webpack_require__(16928);
-var types = __webpack_require__(59323);
-var readFile = __webpack_require__(43155);
+var types = __webpack_require__(92807);
+var readFile = __webpack_require__(63495);
 
 const ENV_PROFILE = "AWS_PROFILE";
 const DEFAULT_PROFILE = "default";
@@ -23041,7 +23055,7 @@ Object.keys(getSSOTokenFilepath).forEach(function (k) {
 
 /***/ }),
 
-/***/ 43155:
+/***/ 63495:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
@@ -23064,17 +23078,17 @@ exports.readFile = readFile;
 
 /***/ }),
 
-/***/ 3062:
+/***/ 9922:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var utilHexEncoding = __webpack_require__(58835);
-var utilUtf8 = __webpack_require__(44855);
-var isArrayBuffer = __webpack_require__(15493);
-var protocolHttp = __webpack_require__(80352);
-var utilMiddleware = __webpack_require__(96556);
-var utilUriEscape = __webpack_require__(60637);
+var utilHexEncoding = __webpack_require__(76999);
+var utilUtf8 = __webpack_require__(75579);
+var isArrayBuffer = __webpack_require__(73273);
+var protocolHttp = __webpack_require__(26204);
+var utilMiddleware = __webpack_require__(27256);
+var utilUriEscape = __webpack_require__(35009);
 
 const ALGORITHM_QUERY_PARAM = "X-Amz-Algorithm";
 const CREDENTIAL_QUERY_PARAM = "X-Amz-Credential";
@@ -23627,16 +23641,16 @@ exports.signatureV4aContainer = signatureV4aContainer;
 
 /***/ }),
 
-/***/ 4466:
+/***/ 78452:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var middlewareStack = __webpack_require__(43226);
-var protocols = __webpack_require__(53622);
-var types = __webpack_require__(59323);
-var schema = __webpack_require__(82722);
-var serde = __webpack_require__(13270);
+var middlewareStack = __webpack_require__(39846);
+var protocols = __webpack_require__(84400);
+var types = __webpack_require__(92807);
+var schema = __webpack_require__(99448);
+var serde = __webpack_require__(94632);
 
 class Client {
     config;
@@ -24229,7 +24243,7 @@ Object.keys(serde).forEach(function (k) {
 
 /***/ }),
 
-/***/ 59323:
+/***/ 92807:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -24327,12 +24341,12 @@ exports.resolveDefaultRuntimeConfig = resolveDefaultRuntimeConfig;
 
 /***/ }),
 
-/***/ 91990:
+/***/ 93282:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var querystringParser = __webpack_require__(71434);
+var querystringParser = __webpack_require__(68182);
 
 const parseUrl = (url) => {
     if (typeof url === "string") {
@@ -24357,13 +24371,13 @@ exports.parseUrl = parseUrl;
 
 /***/ }),
 
-/***/ 33989:
+/***/ 55385:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.fromBase64 = void 0;
-const util_buffer_from_1 = __webpack_require__(9081);
+const util_buffer_from_1 = __webpack_require__(94845);
 const BASE64_REGEX = /^[A-Za-z0-9+/]*={0,2}$/;
 const fromBase64 = (input) => {
     if ((input.length * 3) % 4 !== 0) {
@@ -24380,13 +24394,13 @@ exports.fromBase64 = fromBase64;
 
 /***/ }),
 
-/***/ 28552:
+/***/ 11532:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var fromBase64 = __webpack_require__(33989);
-var toBase64 = __webpack_require__(88552);
+var fromBase64 = __webpack_require__(55385);
+var toBase64 = __webpack_require__(79076);
 
 
 
@@ -24406,14 +24420,14 @@ Object.keys(toBase64).forEach(function (k) {
 
 /***/ }),
 
-/***/ 88552:
+/***/ 79076:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.toBase64 = void 0;
-const util_buffer_from_1 = __webpack_require__(9081);
-const util_utf8_1 = __webpack_require__(44855);
+const util_buffer_from_1 = __webpack_require__(94845);
+const util_utf8_1 = __webpack_require__(75579);
 const toBase64 = (_input) => {
     let input;
     if (typeof _input === "string") {
@@ -24432,7 +24446,7 @@ exports.toBase64 = toBase64;
 
 /***/ }),
 
-/***/ 29633:
+/***/ 88773:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -24469,7 +24483,7 @@ exports.calculateBodyLength = calculateBodyLength;
 
 /***/ }),
 
-/***/ 90306:
+/***/ 47062:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
@@ -24508,7 +24522,7 @@ exports.calculateBodyLength = calculateBodyLength;
 
 /***/ }),
 
-/***/ 10683:
+/***/ 50727:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var __defProp = Object.defineProperty;
@@ -24537,7 +24551,7 @@ __export(src_exports, {
   fromString: () => fromString
 });
 module.exports = __toCommonJS(src_exports);
-var import_is_array_buffer = __webpack_require__(1767);
+var import_is_array_buffer = __webpack_require__(17843);
 var import_buffer = __webpack_require__(20181);
 var fromArrayBuffer = /* @__PURE__ */ __name((input, offset = 0, length = input.byteLength - offset) => {
   if (!(0, import_is_array_buffer.isArrayBuffer)(input)) {
@@ -24559,12 +24573,12 @@ var fromString = /* @__PURE__ */ __name((input, encoding) => {
 
 /***/ }),
 
-/***/ 9081:
+/***/ 94845:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var isArrayBuffer = __webpack_require__(15493);
+var isArrayBuffer = __webpack_require__(73273);
 var buffer = __webpack_require__(20181);
 
 const fromArrayBuffer = (input, offset = 0, length = input.byteLength - offset) => {
@@ -24586,7 +24600,7 @@ exports.fromString = fromString;
 
 /***/ }),
 
-/***/ 82005:
+/***/ 25897:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -24623,14 +24637,14 @@ exports.numberSelector = numberSelector;
 
 /***/ }),
 
-/***/ 14053:
+/***/ 55918:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var configResolver = __webpack_require__(19532);
-var nodeConfigProvider = __webpack_require__(31407);
-var propertyProvider = __webpack_require__(94476);
+var configResolver = __webpack_require__(77536);
+var nodeConfigProvider = __webpack_require__(21755);
+var propertyProvider = __webpack_require__(94200);
 
 const AWS_EXECUTION_ENV = "AWS_EXECUTION_ENV";
 const AWS_REGION_ENV = "AWS_REGION";
@@ -24690,7 +24704,7 @@ const inferPhysicalRegion = async () => {
     }
     if (!process.env[ENV_IMDS_DISABLED]) {
         try {
-            const { getInstanceMetadataEndpoint, httpRequest } = await __webpack_require__.e(/* import() */ 402).then(__webpack_require__.t.bind(__webpack_require__, 70402, 19));
+            const { getInstanceMetadataEndpoint, httpRequest } = await __webpack_require__.e(/* import() */ 950).then(__webpack_require__.t.bind(__webpack_require__, 89950, 19));
             const endpoint = await getInstanceMetadataEndpoint();
             return (await httpRequest({ ...endpoint, path: IMDS_REGION_PATH })).toString();
         }
@@ -24704,12 +24718,12 @@ exports.resolveDefaultsModeConfig = resolveDefaultsModeConfig;
 
 /***/ }),
 
-/***/ 69721:
+/***/ 73277:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var types = __webpack_require__(59323);
+var types = __webpack_require__(92807);
 
 class EndpointCache {
     capacity;
@@ -25183,7 +25197,7 @@ exports.resolveEndpoint = resolveEndpoint;
 
 /***/ }),
 
-/***/ 58835:
+/***/ 76999:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -25228,12 +25242,12 @@ exports.toHex = toHex;
 
 /***/ }),
 
-/***/ 96556:
+/***/ 27256:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var types = __webpack_require__(59323);
+var types = __webpack_require__(92807);
 
 const getSmithyContext = (context) => context[types.SMITHY_CONTEXT_KEY] || (context[types.SMITHY_CONTEXT_KEY] = {});
 
@@ -25250,12 +25264,12 @@ exports.normalizeProvider = normalizeProvider;
 
 /***/ }),
 
-/***/ 4766:
+/***/ 49274:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var serviceErrorClassification = __webpack_require__(84330);
+var serviceErrorClassification = __webpack_require__(40854);
 
 exports.RETRY_MODES = void 0;
 (function (RETRY_MODES) {
@@ -25535,7 +25549,7 @@ exports.TIMEOUT_RETRY_COST = TIMEOUT_RETRY_COST;
 
 /***/ }),
 
-/***/ 40488:
+/***/ 42532:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -25578,7 +25592,7 @@ exports.ByteArrayCollector = ByteArrayCollector;
 
 /***/ }),
 
-/***/ 22565:
+/***/ 41945:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -25592,13 +25606,13 @@ exports.ChecksumStream = ChecksumStream;
 
 /***/ }),
 
-/***/ 7899:
+/***/ 31215:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.ChecksumStream = void 0;
-const util_base64_1 = __webpack_require__(28552);
+const util_base64_1 = __webpack_require__(11532);
 const stream_1 = __webpack_require__(2203);
 class ChecksumStream extends stream_1.Duplex {
     expectedChecksum;
@@ -25652,15 +25666,15 @@ exports.ChecksumStream = ChecksumStream;
 
 /***/ }),
 
-/***/ 50997:
+/***/ 61953:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.createChecksumStream = void 0;
-const util_base64_1 = __webpack_require__(28552);
-const stream_type_check_1 = __webpack_require__(41162);
-const ChecksumStream_browser_1 = __webpack_require__(22565);
+const util_base64_1 = __webpack_require__(11532);
+const stream_type_check_1 = __webpack_require__(48526);
+const ChecksumStream_browser_1 = __webpack_require__(41945);
 const createChecksumStream = ({ expectedChecksum, checksum, source, checksumSourceLocation, base64Encoder, }) => {
     if (!(0, stream_type_check_1.isReadableStream)(source)) {
         throw new Error(`@smithy/util-stream: unsupported source type ${source?.constructor?.name ?? source} in ChecksumStream.`);
@@ -25698,15 +25712,15 @@ exports.createChecksumStream = createChecksumStream;
 
 /***/ }),
 
-/***/ 56171:
+/***/ 21399:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.createChecksumStream = createChecksumStream;
-const stream_type_check_1 = __webpack_require__(41162);
-const ChecksumStream_1 = __webpack_require__(7899);
-const createChecksumStream_browser_1 = __webpack_require__(50997);
+const stream_type_check_1 = __webpack_require__(48526);
+const ChecksumStream_1 = __webpack_require__(31215);
+const createChecksumStream_browser_1 = __webpack_require__(61953);
 function createChecksumStream(init) {
     if (typeof ReadableStream === "function" && (0, stream_type_check_1.isReadableStream)(init.source)) {
         return (0, createChecksumStream_browser_1.createChecksumStream)(init);
@@ -25717,16 +25731,16 @@ function createChecksumStream(init) {
 
 /***/ }),
 
-/***/ 75025:
+/***/ 9845:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.createBufferedReadable = createBufferedReadable;
 const node_stream_1 = __webpack_require__(57075);
-const ByteArrayCollector_1 = __webpack_require__(40488);
-const createBufferedReadableStream_1 = __webpack_require__(28777);
-const stream_type_check_1 = __webpack_require__(41162);
+const ByteArrayCollector_1 = __webpack_require__(42532);
+const createBufferedReadableStream_1 = __webpack_require__(93397);
+const stream_type_check_1 = __webpack_require__(48526);
 function createBufferedReadable(upstream, size, logger) {
     if ((0, stream_type_check_1.isReadableStream)(upstream)) {
         return (0, createBufferedReadableStream_1.createBufferedReadableStream)(upstream, size, logger);
@@ -25784,7 +25798,7 @@ function createBufferedReadable(upstream, size, logger) {
 
 /***/ }),
 
-/***/ 28777:
+/***/ 93397:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
@@ -25795,7 +25809,7 @@ exports.merge = merge;
 exports.flush = flush;
 exports.sizeOf = sizeOf;
 exports.modeOf = modeOf;
-const ByteArrayCollector_1 = __webpack_require__(40488);
+const ByteArrayCollector_1 = __webpack_require__(42532);
 function createBufferedReadableStream(upstream, size, logger) {
     const reader = upstream.getReader();
     let streamBufferingLoggedWarning = false;
@@ -25894,7 +25908,7 @@ function modeOf(chunk, allowBuffer = true) {
 
 /***/ }),
 
-/***/ 73182:
+/***/ 5834:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
@@ -25931,7 +25945,7 @@ exports.getAwsChunkedEncodingStream = getAwsChunkedEncodingStream;
 
 /***/ }),
 
-/***/ 58478:
+/***/ 98130:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -25972,15 +25986,15 @@ async function headStream(stream, bytes) {
 
 /***/ }),
 
-/***/ 62504:
+/***/ 93708:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.headStream = void 0;
 const stream_1 = __webpack_require__(2203);
-const headStream_browser_1 = __webpack_require__(58478);
-const stream_type_check_1 = __webpack_require__(41162);
+const headStream_browser_1 = __webpack_require__(98130);
+const stream_type_check_1 = __webpack_require__(48526);
 const headStream = (stream, bytes) => {
     if ((0, stream_type_check_1.isReadableStream)(stream)) {
         return (0, headStream_browser_1.headStream)(stream, bytes);
@@ -26021,21 +26035,21 @@ class Collector extends stream_1.Writable {
 
 /***/ }),
 
-/***/ 51952:
+/***/ 77292:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var utilBase64 = __webpack_require__(28552);
-var utilUtf8 = __webpack_require__(44855);
-var ChecksumStream = __webpack_require__(7899);
-var createChecksumStream = __webpack_require__(56171);
-var createBufferedReadable = __webpack_require__(75025);
-var getAwsChunkedEncodingStream = __webpack_require__(73182);
-var headStream = __webpack_require__(62504);
-var sdkStreamMixin = __webpack_require__(31557);
-var splitStream = __webpack_require__(38160);
-var streamTypeCheck = __webpack_require__(41162);
+var utilBase64 = __webpack_require__(11532);
+var utilUtf8 = __webpack_require__(75579);
+var ChecksumStream = __webpack_require__(31215);
+var createChecksumStream = __webpack_require__(21399);
+var createBufferedReadable = __webpack_require__(9845);
+var getAwsChunkedEncodingStream = __webpack_require__(5834);
+var headStream = __webpack_require__(93708);
+var sdkStreamMixin = __webpack_require__(20321);
+var splitStream = __webpack_require__(53868);
+var streamTypeCheck = __webpack_require__(48526);
 
 class Uint8ArrayBlobAdapter extends Uint8Array {
     static fromString(source, encoding = "utf-8") {
@@ -26112,17 +26126,17 @@ Object.keys(streamTypeCheck).forEach(function (k) {
 
 /***/ }),
 
-/***/ 83555:
+/***/ 81103:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.sdkStreamMixin = void 0;
-const fetch_http_handler_1 = __webpack_require__(60321);
-const util_base64_1 = __webpack_require__(28552);
-const util_hex_encoding_1 = __webpack_require__(58835);
-const util_utf8_1 = __webpack_require__(44855);
-const stream_type_check_1 = __webpack_require__(41162);
+const fetch_http_handler_1 = __webpack_require__(40725);
+const util_base64_1 = __webpack_require__(11532);
+const util_hex_encoding_1 = __webpack_require__(76999);
+const util_utf8_1 = __webpack_require__(75579);
+const stream_type_check_1 = __webpack_require__(48526);
 const ERR_MSG_STREAM_HAS_BEEN_TRANSFORMED = "The stream has already been transformed.";
 const sdkStreamMixin = (stream) => {
     if (!isBlobInstance(stream) && !(0, stream_type_check_1.isReadableStream)(stream)) {
@@ -26187,16 +26201,16 @@ const isBlobInstance = (stream) => typeof Blob === "function" && stream instance
 
 /***/ }),
 
-/***/ 31557:
+/***/ 20321:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.sdkStreamMixin = void 0;
-const node_http_handler_1 = __webpack_require__(83064);
-const util_buffer_from_1 = __webpack_require__(9081);
+const node_http_handler_1 = __webpack_require__(66876);
+const util_buffer_from_1 = __webpack_require__(94845);
 const stream_1 = __webpack_require__(2203);
-const sdk_stream_mixin_browser_1 = __webpack_require__(83555);
+const sdk_stream_mixin_browser_1 = __webpack_require__(81103);
 const ERR_MSG_STREAM_HAS_BEEN_TRANSFORMED = "The stream has already been transformed.";
 const sdkStreamMixin = (stream) => {
     if (!(stream instanceof stream_1.Readable)) {
@@ -26248,7 +26262,7 @@ exports.sdkStreamMixin = sdkStreamMixin;
 
 /***/ }),
 
-/***/ 78646:
+/***/ 72722:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -26265,15 +26279,15 @@ async function splitStream(stream) {
 
 /***/ }),
 
-/***/ 38160:
+/***/ 53868:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.splitStream = splitStream;
 const stream_1 = __webpack_require__(2203);
-const splitStream_browser_1 = __webpack_require__(78646);
-const stream_type_check_1 = __webpack_require__(41162);
+const splitStream_browser_1 = __webpack_require__(72722);
+const stream_type_check_1 = __webpack_require__(48526);
 async function splitStream(stream) {
     if ((0, stream_type_check_1.isReadableStream)(stream) || (0, stream_type_check_1.isBlob)(stream)) {
         return (0, splitStream_browser_1.splitStream)(stream);
@@ -26288,7 +26302,7 @@ async function splitStream(stream) {
 
 /***/ }),
 
-/***/ 41162:
+/***/ 48526:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -26305,7 +26319,7 @@ exports.isBlob = isBlob;
 
 /***/ }),
 
-/***/ 60637:
+/***/ 35009:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -26321,7 +26335,7 @@ exports.escapeUriPath = escapeUriPath;
 
 /***/ }),
 
-/***/ 11478:
+/***/ 45714:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var __defProp = Object.defineProperty;
@@ -26353,7 +26367,7 @@ __export(src_exports, {
 module.exports = __toCommonJS(src_exports);
 
 // src/fromUtf8.ts
-var import_util_buffer_from = __webpack_require__(10683);
+var import_util_buffer_from = __webpack_require__(50727);
 var fromUtf8 = /* @__PURE__ */ __name((input) => {
   const buf = (0, import_util_buffer_from.fromString)(input, "utf8");
   return new Uint8Array(buf.buffer, buf.byteOffset, buf.byteLength / Uint8Array.BYTES_PER_ELEMENT);
@@ -26389,12 +26403,12 @@ var toUtf8 = /* @__PURE__ */ __name((input) => {
 
 /***/ }),
 
-/***/ 44855:
+/***/ 75579:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var utilBufferFrom = __webpack_require__(9081);
+var utilBufferFrom = __webpack_require__(94845);
 
 const fromUtf8 = (input) => {
     const buf = utilBufferFrom.fromString(input, "utf8");
@@ -26428,7 +26442,7 @@ exports.toUtf8 = toUtf8;
 
 /***/ }),
 
-/***/ 53416:
+/***/ 44516:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -26614,12 +26628,12 @@ exports.waiterServiceDefaults = waiterServiceDefaults;
 
 /***/ }),
 
-/***/ 2035:
+/***/ 77919:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var randomUUID = __webpack_require__(46235);
+var randomUUID = __webpack_require__(37183);
 
 const decimalToHex = Array.from({ length: 256 }, (_, i) => i.toString(16).padStart(2, "0"));
 const v4 = () => {
@@ -26657,20 +26671,20 @@ exports.v4 = v4;
 
 /***/ }),
 
-/***/ 46235:
+/***/ 37183:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.randomUUID = void 0;
-const tslib_1 = __webpack_require__(53824);
+const tslib_1 = __webpack_require__(67892);
 const crypto_1 = tslib_1.__importDefault(__webpack_require__(76982));
 exports.randomUUID = crypto_1.default.randomUUID.bind(crypto_1.default);
 
 
 /***/ }),
 
-/***/ 58588:
+/***/ 5014:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
@@ -26680,13 +26694,13 @@ exports.randomUUID = crypto_1.default.randomUUID.bind(crypto_1.default);
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.ObjectStorage = void 0;
-const tslib_1 = __webpack_require__(53824);
-const client_s3_1 = __webpack_require__(98302);
-const lib_storage_1 = __webpack_require__(73673);
+const tslib_1 = __webpack_require__(67892);
+const client_s3_1 = __webpack_require__(35093);
+const lib_storage_1 = __webpack_require__(12583);
 const crypto = tslib_1.__importStar(__webpack_require__(76982));
-const pathe = tslib_1.__importStar(__webpack_require__(1890));
-const DaytonaError_1 = __webpack_require__(36764);
-const Import_1 = __webpack_require__(83669);
+const pathe = tslib_1.__importStar(__webpack_require__(58294));
+const DaytonaError_1 = __webpack_require__(16798);
+const Import_1 = __webpack_require__(97507);
 /**
  * ObjectStorage class for interacting with object storage services.
  *
@@ -26868,17 +26882,17 @@ exports.ObjectStorage = ObjectStorage;
 
 /***/ }),
 
-/***/ 89106:
+/***/ 61142:
 /***/ ((module) => {
 
 (()=>{"use strict";var t={d:(e,n)=>{for(var i in n)t.o(n,i)&&!t.o(e,i)&&Object.defineProperty(e,i,{enumerable:!0,get:n[i]})},o:(t,e)=>Object.prototype.hasOwnProperty.call(t,e),r:t=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(t,"__esModule",{value:!0})}},e={};t.r(e),t.d(e,{XMLBuilder:()=>ft,XMLParser:()=>st,XMLValidator:()=>mt});const n=":A-Za-z_\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD",i=new RegExp("^["+n+"]["+n+"\\-.\\d\\u00B7\\u0300-\\u036F\\u203F-\\u2040]*$");function s(t,e){const n=[];let i=e.exec(t);for(;i;){const s=[];s.startIndex=e.lastIndex-i[0].length;const r=i.length;for(let t=0;t<r;t++)s.push(i[t]);n.push(s),i=e.exec(t)}return n}const r=function(t){return!(null==i.exec(t))},o={allowBooleanAttributes:!1,unpairedTags:[]};function a(t,e){e=Object.assign({},o,e);const n=[];let i=!1,s=!1;"\ufeff"===t[0]&&(t=t.substr(1));for(let o=0;o<t.length;o++)if("<"===t[o]&&"?"===t[o+1]){if(o+=2,o=u(t,o),o.err)return o}else{if("<"!==t[o]){if(l(t[o]))continue;return x("InvalidChar","char '"+t[o]+"' is not expected.",N(t,o))}{let a=o;if(o++,"!"===t[o]){o=h(t,o);continue}{let d=!1;"/"===t[o]&&(d=!0,o++);let f="";for(;o<t.length&&">"!==t[o]&&" "!==t[o]&&"\t"!==t[o]&&"\n"!==t[o]&&"\r"!==t[o];o++)f+=t[o];if(f=f.trim(),"/"===f[f.length-1]&&(f=f.substring(0,f.length-1),o--),!r(f)){let e;return e=0===f.trim().length?"Invalid space after '<'.":"Tag '"+f+"' is an invalid name.",x("InvalidTag",e,N(t,o))}const p=c(t,o);if(!1===p)return x("InvalidAttr","Attributes for '"+f+"' have open quote.",N(t,o));let b=p.value;if(o=p.index,"/"===b[b.length-1]){const n=o-b.length;b=b.substring(0,b.length-1);const s=g(b,e);if(!0!==s)return x(s.err.code,s.err.msg,N(t,n+s.err.line));i=!0}else if(d){if(!p.tagClosed)return x("InvalidTag","Closing tag '"+f+"' doesn't have proper closing.",N(t,o));if(b.trim().length>0)return x("InvalidTag","Closing tag '"+f+"' can't have attributes or invalid starting.",N(t,a));if(0===n.length)return x("InvalidTag","Closing tag '"+f+"' has not been opened.",N(t,a));{const e=n.pop();if(f!==e.tagName){let n=N(t,e.tagStartPos);return x("InvalidTag","Expected closing tag '"+e.tagName+"' (opened in line "+n.line+", col "+n.col+") instead of closing tag '"+f+"'.",N(t,a))}0==n.length&&(s=!0)}}else{const r=g(b,e);if(!0!==r)return x(r.err.code,r.err.msg,N(t,o-b.length+r.err.line));if(!0===s)return x("InvalidXml","Multiple possible root nodes found.",N(t,o));-1!==e.unpairedTags.indexOf(f)||n.push({tagName:f,tagStartPos:a}),i=!0}for(o++;o<t.length;o++)if("<"===t[o]){if("!"===t[o+1]){o++,o=h(t,o);continue}if("?"!==t[o+1])break;if(o=u(t,++o),o.err)return o}else if("&"===t[o]){const e=m(t,o);if(-1==e)return x("InvalidChar","char '&' is not expected.",N(t,o));o=e}else if(!0===s&&!l(t[o]))return x("InvalidXml","Extra text at the end",N(t,o));"<"===t[o]&&o--}}}return i?1==n.length?x("InvalidTag","Unclosed tag '"+n[0].tagName+"'.",N(t,n[0].tagStartPos)):!(n.length>0)||x("InvalidXml","Invalid '"+JSON.stringify(n.map((t=>t.tagName)),null,4).replace(/\r?\n/g,"")+"' found.",{line:1,col:1}):x("InvalidXml","Start tag expected.",1)}function l(t){return" "===t||"\t"===t||"\n"===t||"\r"===t}function u(t,e){const n=e;for(;e<t.length;e++)if("?"!=t[e]&&" "!=t[e]);else{const i=t.substr(n,e-n);if(e>5&&"xml"===i)return x("InvalidXml","XML declaration allowed only at the start of the document.",N(t,e));if("?"==t[e]&&">"==t[e+1]){e++;break}}return e}function h(t,e){if(t.length>e+5&&"-"===t[e+1]&&"-"===t[e+2]){for(e+=3;e<t.length;e++)if("-"===t[e]&&"-"===t[e+1]&&">"===t[e+2]){e+=2;break}}else if(t.length>e+8&&"D"===t[e+1]&&"O"===t[e+2]&&"C"===t[e+3]&&"T"===t[e+4]&&"Y"===t[e+5]&&"P"===t[e+6]&&"E"===t[e+7]){let n=1;for(e+=8;e<t.length;e++)if("<"===t[e])n++;else if(">"===t[e]&&(n--,0===n))break}else if(t.length>e+9&&"["===t[e+1]&&"C"===t[e+2]&&"D"===t[e+3]&&"A"===t[e+4]&&"T"===t[e+5]&&"A"===t[e+6]&&"["===t[e+7])for(e+=8;e<t.length;e++)if("]"===t[e]&&"]"===t[e+1]&&">"===t[e+2]){e+=2;break}return e}const d='"',f="'";function c(t,e){let n="",i="",s=!1;for(;e<t.length;e++){if(t[e]===d||t[e]===f)""===i?i=t[e]:i!==t[e]||(i="");else if(">"===t[e]&&""===i){s=!0;break}n+=t[e]}return""===i&&{value:n,index:e,tagClosed:s}}const p=new RegExp("(\\s*)([^\\s=]+)(\\s*=)?(\\s*(['\"])(([\\s\\S])*?)\\5)?","g");function g(t,e){const n=s(t,p),i={};for(let t=0;t<n.length;t++){if(0===n[t][1].length)return x("InvalidAttr","Attribute '"+n[t][2]+"' has no space in starting.",E(n[t]));if(void 0!==n[t][3]&&void 0===n[t][4])return x("InvalidAttr","Attribute '"+n[t][2]+"' is without value.",E(n[t]));if(void 0===n[t][3]&&!e.allowBooleanAttributes)return x("InvalidAttr","boolean attribute '"+n[t][2]+"' is not allowed.",E(n[t]));const s=n[t][2];if(!b(s))return x("InvalidAttr","Attribute '"+s+"' is an invalid name.",E(n[t]));if(i.hasOwnProperty(s))return x("InvalidAttr","Attribute '"+s+"' is repeated.",E(n[t]));i[s]=1}return!0}function m(t,e){if(";"===t[++e])return-1;if("#"===t[e])return function(t,e){let n=/\d/;for("x"===t[e]&&(e++,n=/[\da-fA-F]/);e<t.length;e++){if(";"===t[e])return e;if(!t[e].match(n))break}return-1}(t,++e);let n=0;for(;e<t.length;e++,n++)if(!(t[e].match(/\w/)&&n<20)){if(";"===t[e])break;return-1}return e}function x(t,e,n){return{err:{code:t,msg:e,line:n.line||n,col:n.col}}}function b(t){return r(t)}function N(t,e){const n=t.substring(0,e).split(/\r?\n/);return{line:n.length,col:n[n.length-1].length+1}}function E(t){return t.startIndex+t[1].length}const v={preserveOrder:!1,attributeNamePrefix:"@_",attributesGroupName:!1,textNodeName:"#text",ignoreAttributes:!0,removeNSPrefix:!1,allowBooleanAttributes:!1,parseTagValue:!0,parseAttributeValue:!1,trimValues:!0,cdataPropName:!1,numberParseOptions:{hex:!0,leadingZeros:!0,eNotation:!0},tagValueProcessor:function(t,e){return e},attributeValueProcessor:function(t,e){return e},stopNodes:[],alwaysCreateTextNode:!1,isArray:()=>!1,commentPropName:!1,unpairedTags:[],processEntities:!0,htmlEntities:!1,ignoreDeclaration:!1,ignorePiTags:!1,transformTagName:!1,transformAttributeName:!1,updateTag:function(t,e,n){return t},captureMetaData:!1};let y;y="function"!=typeof Symbol?"@@xmlMetadata":Symbol("XML Node Metadata");class T{constructor(t){this.tagname=t,this.child=[],this[":@"]={}}add(t,e){"__proto__"===t&&(t="#__proto__"),this.child.push({[t]:e})}addChild(t,e){"__proto__"===t.tagname&&(t.tagname="#__proto__"),t[":@"]&&Object.keys(t[":@"]).length>0?this.child.push({[t.tagname]:t.child,":@":t[":@"]}):this.child.push({[t.tagname]:t.child}),void 0!==e&&(this.child[this.child.length-1][y]={startIndex:e})}static getMetaDataSymbol(){return y}}function w(t,e){const n={};if("O"!==t[e+3]||"C"!==t[e+4]||"T"!==t[e+5]||"Y"!==t[e+6]||"P"!==t[e+7]||"E"!==t[e+8])throw new Error("Invalid Tag instead of DOCTYPE");{e+=9;let i=1,s=!1,r=!1,o="";for(;e<t.length;e++)if("<"!==t[e]||r)if(">"===t[e]){if(r?"-"===t[e-1]&&"-"===t[e-2]&&(r=!1,i--):i--,0===i)break}else"["===t[e]?s=!0:o+=t[e];else{if(s&&C(t,"!ENTITY",e)){let i,s;e+=7,[i,s,e]=O(t,e+1),-1===s.indexOf("&")&&(n[i]={regx:RegExp(`&${i};`,"g"),val:s})}else if(s&&C(t,"!ELEMENT",e)){e+=8;const{index:n}=S(t,e+1);e=n}else if(s&&C(t,"!ATTLIST",e))e+=8;else if(s&&C(t,"!NOTATION",e)){e+=9;const{index:n}=A(t,e+1);e=n}else{if(!C(t,"!--",e))throw new Error("Invalid DOCTYPE");r=!0}i++,o=""}if(0!==i)throw new Error("Unclosed DOCTYPE")}return{entities:n,i:e}}const P=(t,e)=>{for(;e<t.length&&/\s/.test(t[e]);)e++;return e};function O(t,e){e=P(t,e);let n="";for(;e<t.length&&!/\s/.test(t[e])&&'"'!==t[e]&&"'"!==t[e];)n+=t[e],e++;if($(n),e=P(t,e),"SYSTEM"===t.substring(e,e+6).toUpperCase())throw new Error("External entities are not supported");if("%"===t[e])throw new Error("Parameter entities are not supported");let i="";return[e,i]=I(t,e,"entity"),[n,i,--e]}function A(t,e){e=P(t,e);let n="";for(;e<t.length&&!/\s/.test(t[e]);)n+=t[e],e++;$(n),e=P(t,e);const i=t.substring(e,e+6).toUpperCase();if("SYSTEM"!==i&&"PUBLIC"!==i)throw new Error(`Expected SYSTEM or PUBLIC, found "${i}"`);e+=i.length,e=P(t,e);let s=null,r=null;if("PUBLIC"===i)[e,s]=I(t,e,"publicIdentifier"),'"'!==t[e=P(t,e)]&&"'"!==t[e]||([e,r]=I(t,e,"systemIdentifier"));else if("SYSTEM"===i&&([e,r]=I(t,e,"systemIdentifier"),!r))throw new Error("Missing mandatory system identifier for SYSTEM notation");return{notationName:n,publicIdentifier:s,systemIdentifier:r,index:--e}}function I(t,e,n){let i="";const s=t[e];if('"'!==s&&"'"!==s)throw new Error(`Expected quoted string, found "${s}"`);for(e++;e<t.length&&t[e]!==s;)i+=t[e],e++;if(t[e]!==s)throw new Error(`Unterminated ${n} value`);return[++e,i]}function S(t,e){e=P(t,e);let n="";for(;e<t.length&&!/\s/.test(t[e]);)n+=t[e],e++;if(!$(n))throw new Error(`Invalid element name: "${n}"`);let i="";if("E"===t[e=P(t,e)]&&C(t,"MPTY",e))e+=4;else if("A"===t[e]&&C(t,"NY",e))e+=2;else{if("("!==t[e])throw new Error(`Invalid Element Expression, found "${t[e]}"`);for(e++;e<t.length&&")"!==t[e];)i+=t[e],e++;if(")"!==t[e])throw new Error("Unterminated content model")}return{elementName:n,contentModel:i.trim(),index:e}}function C(t,e,n){for(let i=0;i<e.length;i++)if(e[i]!==t[n+i+1])return!1;return!0}function $(t){if(r(t))return t;throw new Error(`Invalid entity name ${t}`)}const j=/^[-+]?0x[a-fA-F0-9]+$/,D=/^([\-\+])?(0*)([0-9]*(\.[0-9]*)?)$/,V={hex:!0,leadingZeros:!0,decimalPoint:".",eNotation:!0};const M=/^([-+])?(0*)(\d*(\.\d*)?[eE][-\+]?\d+)$/;function _(t){return"function"==typeof t?t:Array.isArray(t)?e=>{for(const n of t){if("string"==typeof n&&e===n)return!0;if(n instanceof RegExp&&n.test(e))return!0}}:()=>!1}class k{constructor(t){this.options=t,this.currentNode=null,this.tagsNodeStack=[],this.docTypeEntities={},this.lastEntities={apos:{regex:/&(apos|#39|#x27);/g,val:"'"},gt:{regex:/&(gt|#62|#x3E);/g,val:">"},lt:{regex:/&(lt|#60|#x3C);/g,val:"<"},quot:{regex:/&(quot|#34|#x22);/g,val:'"'}},this.ampEntity={regex:/&(amp|#38|#x26);/g,val:"&"},this.htmlEntities={space:{regex:/&(nbsp|#160);/g,val:" "},cent:{regex:/&(cent|#162);/g,val:"¢"},pound:{regex:/&(pound|#163);/g,val:"£"},yen:{regex:/&(yen|#165);/g,val:"¥"},euro:{regex:/&(euro|#8364);/g,val:"€"},copyright:{regex:/&(copy|#169);/g,val:"©"},reg:{regex:/&(reg|#174);/g,val:"®"},inr:{regex:/&(inr|#8377);/g,val:"₹"},num_dec:{regex:/&#([0-9]{1,7});/g,val:(t,e)=>String.fromCodePoint(Number.parseInt(e,10))},num_hex:{regex:/&#x([0-9a-fA-F]{1,6});/g,val:(t,e)=>String.fromCodePoint(Number.parseInt(e,16))}},this.addExternalEntities=F,this.parseXml=X,this.parseTextData=L,this.resolveNameSpace=B,this.buildAttributesMap=G,this.isItStopNode=Z,this.replaceEntitiesValue=R,this.readStopNodeData=J,this.saveTextToParentTag=q,this.addChild=Y,this.ignoreAttributesFn=_(this.options.ignoreAttributes)}}function F(t){const e=Object.keys(t);for(let n=0;n<e.length;n++){const i=e[n];this.lastEntities[i]={regex:new RegExp("&"+i+";","g"),val:t[i]}}}function L(t,e,n,i,s,r,o){if(void 0!==t&&(this.options.trimValues&&!i&&(t=t.trim()),t.length>0)){o||(t=this.replaceEntitiesValue(t));const i=this.options.tagValueProcessor(e,t,n,s,r);return null==i?t:typeof i!=typeof t||i!==t?i:this.options.trimValues||t.trim()===t?H(t,this.options.parseTagValue,this.options.numberParseOptions):t}}function B(t){if(this.options.removeNSPrefix){const e=t.split(":"),n="/"===t.charAt(0)?"/":"";if("xmlns"===e[0])return"";2===e.length&&(t=n+e[1])}return t}const U=new RegExp("([^\\s=]+)\\s*(=\\s*(['\"])([\\s\\S]*?)\\3)?","gm");function G(t,e,n){if(!0!==this.options.ignoreAttributes&&"string"==typeof t){const n=s(t,U),i=n.length,r={};for(let t=0;t<i;t++){const i=this.resolveNameSpace(n[t][1]);if(this.ignoreAttributesFn(i,e))continue;let s=n[t][4],o=this.options.attributeNamePrefix+i;if(i.length)if(this.options.transformAttributeName&&(o=this.options.transformAttributeName(o)),"__proto__"===o&&(o="#__proto__"),void 0!==s){this.options.trimValues&&(s=s.trim()),s=this.replaceEntitiesValue(s);const t=this.options.attributeValueProcessor(i,s,e);r[o]=null==t?s:typeof t!=typeof s||t!==s?t:H(s,this.options.parseAttributeValue,this.options.numberParseOptions)}else this.options.allowBooleanAttributes&&(r[o]=!0)}if(!Object.keys(r).length)return;if(this.options.attributesGroupName){const t={};return t[this.options.attributesGroupName]=r,t}return r}}const X=function(t){t=t.replace(/\r\n?/g,"\n");const e=new T("!xml");let n=e,i="",s="";for(let r=0;r<t.length;r++)if("<"===t[r])if("/"===t[r+1]){const e=W(t,">",r,"Closing Tag is not closed.");let o=t.substring(r+2,e).trim();if(this.options.removeNSPrefix){const t=o.indexOf(":");-1!==t&&(o=o.substr(t+1))}this.options.transformTagName&&(o=this.options.transformTagName(o)),n&&(i=this.saveTextToParentTag(i,n,s));const a=s.substring(s.lastIndexOf(".")+1);if(o&&-1!==this.options.unpairedTags.indexOf(o))throw new Error(`Unpaired tag can not be used as closing tag: </${o}>`);let l=0;a&&-1!==this.options.unpairedTags.indexOf(a)?(l=s.lastIndexOf(".",s.lastIndexOf(".")-1),this.tagsNodeStack.pop()):l=s.lastIndexOf("."),s=s.substring(0,l),n=this.tagsNodeStack.pop(),i="",r=e}else if("?"===t[r+1]){let e=z(t,r,!1,"?>");if(!e)throw new Error("Pi Tag is not closed.");if(i=this.saveTextToParentTag(i,n,s),this.options.ignoreDeclaration&&"?xml"===e.tagName||this.options.ignorePiTags);else{const t=new T(e.tagName);t.add(this.options.textNodeName,""),e.tagName!==e.tagExp&&e.attrExpPresent&&(t[":@"]=this.buildAttributesMap(e.tagExp,s,e.tagName)),this.addChild(n,t,s,r)}r=e.closeIndex+1}else if("!--"===t.substr(r+1,3)){const e=W(t,"--\x3e",r+4,"Comment is not closed.");if(this.options.commentPropName){const o=t.substring(r+4,e-2);i=this.saveTextToParentTag(i,n,s),n.add(this.options.commentPropName,[{[this.options.textNodeName]:o}])}r=e}else if("!D"===t.substr(r+1,2)){const e=w(t,r);this.docTypeEntities=e.entities,r=e.i}else if("!["===t.substr(r+1,2)){const e=W(t,"]]>",r,"CDATA is not closed.")-2,o=t.substring(r+9,e);i=this.saveTextToParentTag(i,n,s);let a=this.parseTextData(o,n.tagname,s,!0,!1,!0,!0);null==a&&(a=""),this.options.cdataPropName?n.add(this.options.cdataPropName,[{[this.options.textNodeName]:o}]):n.add(this.options.textNodeName,a),r=e+2}else{let o=z(t,r,this.options.removeNSPrefix),a=o.tagName;const l=o.rawTagName;let u=o.tagExp,h=o.attrExpPresent,d=o.closeIndex;this.options.transformTagName&&(a=this.options.transformTagName(a)),n&&i&&"!xml"!==n.tagname&&(i=this.saveTextToParentTag(i,n,s,!1));const f=n;f&&-1!==this.options.unpairedTags.indexOf(f.tagname)&&(n=this.tagsNodeStack.pop(),s=s.substring(0,s.lastIndexOf("."))),a!==e.tagname&&(s+=s?"."+a:a);const c=r;if(this.isItStopNode(this.options.stopNodes,s,a)){let e="";if(u.length>0&&u.lastIndexOf("/")===u.length-1)"/"===a[a.length-1]?(a=a.substr(0,a.length-1),s=s.substr(0,s.length-1),u=a):u=u.substr(0,u.length-1),r=o.closeIndex;else if(-1!==this.options.unpairedTags.indexOf(a))r=o.closeIndex;else{const n=this.readStopNodeData(t,l,d+1);if(!n)throw new Error(`Unexpected end of ${l}`);r=n.i,e=n.tagContent}const i=new T(a);a!==u&&h&&(i[":@"]=this.buildAttributesMap(u,s,a)),e&&(e=this.parseTextData(e,a,s,!0,h,!0,!0)),s=s.substr(0,s.lastIndexOf(".")),i.add(this.options.textNodeName,e),this.addChild(n,i,s,c)}else{if(u.length>0&&u.lastIndexOf("/")===u.length-1){"/"===a[a.length-1]?(a=a.substr(0,a.length-1),s=s.substr(0,s.length-1),u=a):u=u.substr(0,u.length-1),this.options.transformTagName&&(a=this.options.transformTagName(a));const t=new T(a);a!==u&&h&&(t[":@"]=this.buildAttributesMap(u,s,a)),this.addChild(n,t,s,c),s=s.substr(0,s.lastIndexOf("."))}else{const t=new T(a);this.tagsNodeStack.push(n),a!==u&&h&&(t[":@"]=this.buildAttributesMap(u,s,a)),this.addChild(n,t,s,c),n=t}i="",r=d}}else i+=t[r];return e.child};function Y(t,e,n,i){this.options.captureMetaData||(i=void 0);const s=this.options.updateTag(e.tagname,n,e[":@"]);!1===s||("string"==typeof s?(e.tagname=s,t.addChild(e,i)):t.addChild(e,i))}const R=function(t){if(this.options.processEntities){for(let e in this.docTypeEntities){const n=this.docTypeEntities[e];t=t.replace(n.regx,n.val)}for(let e in this.lastEntities){const n=this.lastEntities[e];t=t.replace(n.regex,n.val)}if(this.options.htmlEntities)for(let e in this.htmlEntities){const n=this.htmlEntities[e];t=t.replace(n.regex,n.val)}t=t.replace(this.ampEntity.regex,this.ampEntity.val)}return t};function q(t,e,n,i){return t&&(void 0===i&&(i=0===e.child.length),void 0!==(t=this.parseTextData(t,e.tagname,n,!1,!!e[":@"]&&0!==Object.keys(e[":@"]).length,i))&&""!==t&&e.add(this.options.textNodeName,t),t=""),t}function Z(t,e,n){const i="*."+n;for(const n in t){const s=t[n];if(i===s||e===s)return!0}return!1}function W(t,e,n,i){const s=t.indexOf(e,n);if(-1===s)throw new Error(i);return s+e.length-1}function z(t,e,n,i=">"){const s=function(t,e,n=">"){let i,s="";for(let r=e;r<t.length;r++){let e=t[r];if(i)e===i&&(i="");else if('"'===e||"'"===e)i=e;else if(e===n[0]){if(!n[1])return{data:s,index:r};if(t[r+1]===n[1])return{data:s,index:r}}else"\t"===e&&(e=" ");s+=e}}(t,e+1,i);if(!s)return;let r=s.data;const o=s.index,a=r.search(/\s/);let l=r,u=!0;-1!==a&&(l=r.substring(0,a),r=r.substring(a+1).trimStart());const h=l;if(n){const t=l.indexOf(":");-1!==t&&(l=l.substr(t+1),u=l!==s.data.substr(t+1))}return{tagName:l,tagExp:r,closeIndex:o,attrExpPresent:u,rawTagName:h}}function J(t,e,n){const i=n;let s=1;for(;n<t.length;n++)if("<"===t[n])if("/"===t[n+1]){const r=W(t,">",n,`${e} is not closed`);if(t.substring(n+2,r).trim()===e&&(s--,0===s))return{tagContent:t.substring(i,n),i:r};n=r}else if("?"===t[n+1])n=W(t,"?>",n+1,"StopNode is not closed.");else if("!--"===t.substr(n+1,3))n=W(t,"--\x3e",n+3,"StopNode is not closed.");else if("!["===t.substr(n+1,2))n=W(t,"]]>",n,"StopNode is not closed.")-2;else{const i=z(t,n,">");i&&((i&&i.tagName)===e&&"/"!==i.tagExp[i.tagExp.length-1]&&s++,n=i.closeIndex)}}function H(t,e,n){if(e&&"string"==typeof t){const e=t.trim();return"true"===e||"false"!==e&&function(t,e={}){if(e=Object.assign({},V,e),!t||"string"!=typeof t)return t;let n=t.trim();if(void 0!==e.skipLike&&e.skipLike.test(n))return t;if("0"===t)return 0;if(e.hex&&j.test(n))return function(t){if(parseInt)return parseInt(t,16);if(Number.parseInt)return Number.parseInt(t,16);if(window&&window.parseInt)return window.parseInt(t,16);throw new Error("parseInt, Number.parseInt, window.parseInt are not supported")}(n);if(-1!==n.search(/.+[eE].+/))return function(t,e,n){if(!n.eNotation)return t;const i=e.match(M);if(i){let s=i[1]||"";const r=-1===i[3].indexOf("e")?"E":"e",o=i[2],a=s?t[o.length+1]===r:t[o.length]===r;return o.length>1&&a?t:1!==o.length||!i[3].startsWith(`.${r}`)&&i[3][0]!==r?n.leadingZeros&&!a?(e=(i[1]||"")+i[3],Number(e)):t:Number(e)}return t}(t,n,e);{const s=D.exec(n);if(s){const r=s[1]||"",o=s[2];let a=(i=s[3])&&-1!==i.indexOf(".")?("."===(i=i.replace(/0+$/,""))?i="0":"."===i[0]?i="0"+i:"."===i[i.length-1]&&(i=i.substring(0,i.length-1)),i):i;const l=r?"."===t[o.length+1]:"."===t[o.length];if(!e.leadingZeros&&(o.length>1||1===o.length&&!l))return t;{const i=Number(n),s=String(i);if(0===i||-0===i)return i;if(-1!==s.search(/[eE]/))return e.eNotation?i:t;if(-1!==n.indexOf("."))return"0"===s||s===a||s===`${r}${a}`?i:t;let l=o?a:n;return o?l===s||r+l===s?i:t:l===s||l===r+s?i:t}}return t}var i}(t,n)}return void 0!==t?t:""}const K=T.getMetaDataSymbol();function Q(t,e){return tt(t,e)}function tt(t,e,n){let i;const s={};for(let r=0;r<t.length;r++){const o=t[r],a=et(o);let l="";if(l=void 0===n?a:n+"."+a,a===e.textNodeName)void 0===i?i=o[a]:i+=""+o[a];else{if(void 0===a)continue;if(o[a]){let t=tt(o[a],e,l);const n=it(t,e);void 0!==o[K]&&(t[K]=o[K]),o[":@"]?nt(t,o[":@"],l,e):1!==Object.keys(t).length||void 0===t[e.textNodeName]||e.alwaysCreateTextNode?0===Object.keys(t).length&&(e.alwaysCreateTextNode?t[e.textNodeName]="":t=""):t=t[e.textNodeName],void 0!==s[a]&&s.hasOwnProperty(a)?(Array.isArray(s[a])||(s[a]=[s[a]]),s[a].push(t)):e.isArray(a,l,n)?s[a]=[t]:s[a]=t}}}return"string"==typeof i?i.length>0&&(s[e.textNodeName]=i):void 0!==i&&(s[e.textNodeName]=i),s}function et(t){const e=Object.keys(t);for(let t=0;t<e.length;t++){const n=e[t];if(":@"!==n)return n}}function nt(t,e,n,i){if(e){const s=Object.keys(e),r=s.length;for(let o=0;o<r;o++){const r=s[o];i.isArray(r,n+"."+r,!0,!0)?t[r]=[e[r]]:t[r]=e[r]}}}function it(t,e){const{textNodeName:n}=e,i=Object.keys(t).length;return 0===i||!(1!==i||!t[n]&&"boolean"!=typeof t[n]&&0!==t[n])}class st{constructor(t){this.externalEntities={},this.options=function(t){return Object.assign({},v,t)}(t)}parse(t,e){if("string"==typeof t);else{if(!t.toString)throw new Error("XML data is accepted in String or Bytes[] form.");t=t.toString()}if(e){!0===e&&(e={});const n=a(t,e);if(!0!==n)throw Error(`${n.err.msg}:${n.err.line}:${n.err.col}`)}const n=new k(this.options);n.addExternalEntities(this.externalEntities);const i=n.parseXml(t);return this.options.preserveOrder||void 0===i?i:Q(i,this.options)}addEntity(t,e){if(-1!==e.indexOf("&"))throw new Error("Entity value can't have '&'");if(-1!==t.indexOf("&")||-1!==t.indexOf(";"))throw new Error("An entity must be set without '&' and ';'. Eg. use '#xD' for '&#xD;'");if("&"===e)throw new Error("An entity with value '&' is not permitted");this.externalEntities[t]=e}static getMetaDataSymbol(){return T.getMetaDataSymbol()}}function rt(t,e){let n="";return e.format&&e.indentBy.length>0&&(n="\n"),ot(t,e,"",n)}function ot(t,e,n,i){let s="",r=!1;for(let o=0;o<t.length;o++){const a=t[o],l=at(a);if(void 0===l)continue;let u="";if(u=0===n.length?l:`${n}.${l}`,l===e.textNodeName){let t=a[l];ut(u,e)||(t=e.tagValueProcessor(l,t),t=ht(t,e)),r&&(s+=i),s+=t,r=!1;continue}if(l===e.cdataPropName){r&&(s+=i),s+=`<![CDATA[${a[l][0][e.textNodeName]}]]>`,r=!1;continue}if(l===e.commentPropName){s+=i+`\x3c!--${a[l][0][e.textNodeName]}--\x3e`,r=!0;continue}if("?"===l[0]){const t=lt(a[":@"],e),n="?xml"===l?"":i;let o=a[l][0][e.textNodeName];o=0!==o.length?" "+o:"",s+=n+`<${l}${o}${t}?>`,r=!0;continue}let h=i;""!==h&&(h+=e.indentBy);const d=i+`<${l}${lt(a[":@"],e)}`,f=ot(a[l],e,u,h);-1!==e.unpairedTags.indexOf(l)?e.suppressUnpairedNode?s+=d+">":s+=d+"/>":f&&0!==f.length||!e.suppressEmptyNode?f&&f.endsWith(">")?s+=d+`>${f}${i}</${l}>`:(s+=d+">",f&&""!==i&&(f.includes("/>")||f.includes("</"))?s+=i+e.indentBy+f+i:s+=f,s+=`</${l}>`):s+=d+"/>",r=!0}return s}function at(t){const e=Object.keys(t);for(let n=0;n<e.length;n++){const i=e[n];if(t.hasOwnProperty(i)&&":@"!==i)return i}}function lt(t,e){let n="";if(t&&!e.ignoreAttributes)for(let i in t){if(!t.hasOwnProperty(i))continue;let s=e.attributeValueProcessor(i,t[i]);s=ht(s,e),!0===s&&e.suppressBooleanAttributes?n+=` ${i.substr(e.attributeNamePrefix.length)}`:n+=` ${i.substr(e.attributeNamePrefix.length)}="${s}"`}return n}function ut(t,e){let n=(t=t.substr(0,t.length-e.textNodeName.length-1)).substr(t.lastIndexOf(".")+1);for(let i in e.stopNodes)if(e.stopNodes[i]===t||e.stopNodes[i]==="*."+n)return!0;return!1}function ht(t,e){if(t&&t.length>0&&e.processEntities)for(let n=0;n<e.entities.length;n++){const i=e.entities[n];t=t.replace(i.regex,i.val)}return t}const dt={attributeNamePrefix:"@_",attributesGroupName:!1,textNodeName:"#text",ignoreAttributes:!0,cdataPropName:!1,format:!1,indentBy:"  ",suppressEmptyNode:!1,suppressUnpairedNode:!0,suppressBooleanAttributes:!0,tagValueProcessor:function(t,e){return e},attributeValueProcessor:function(t,e){return e},preserveOrder:!1,commentPropName:!1,unpairedTags:[],entities:[{regex:new RegExp("&","g"),val:"&amp;"},{regex:new RegExp(">","g"),val:"&gt;"},{regex:new RegExp("<","g"),val:"&lt;"},{regex:new RegExp("'","g"),val:"&apos;"},{regex:new RegExp('"',"g"),val:"&quot;"}],processEntities:!0,stopNodes:[],oneListGroup:!1};function ft(t){this.options=Object.assign({},dt,t),!0===this.options.ignoreAttributes||this.options.attributesGroupName?this.isAttribute=function(){return!1}:(this.ignoreAttributesFn=_(this.options.ignoreAttributes),this.attrPrefixLen=this.options.attributeNamePrefix.length,this.isAttribute=gt),this.processTextOrObjNode=ct,this.options.format?(this.indentate=pt,this.tagEndChar=">\n",this.newLine="\n"):(this.indentate=function(){return""},this.tagEndChar=">",this.newLine="")}function ct(t,e,n,i){const s=this.j2x(t,n+1,i.concat(e));return void 0!==t[this.options.textNodeName]&&1===Object.keys(t).length?this.buildTextValNode(t[this.options.textNodeName],e,s.attrStr,n):this.buildObjectNode(s.val,e,s.attrStr,n)}function pt(t){return this.options.indentBy.repeat(t)}function gt(t){return!(!t.startsWith(this.options.attributeNamePrefix)||t===this.options.textNodeName)&&t.substr(this.attrPrefixLen)}ft.prototype.build=function(t){return this.options.preserveOrder?rt(t,this.options):(Array.isArray(t)&&this.options.arrayNodeName&&this.options.arrayNodeName.length>1&&(t={[this.options.arrayNodeName]:t}),this.j2x(t,0,[]).val)},ft.prototype.j2x=function(t,e,n){let i="",s="";const r=n.join(".");for(let o in t)if(Object.prototype.hasOwnProperty.call(t,o))if(void 0===t[o])this.isAttribute(o)&&(s+="");else if(null===t[o])this.isAttribute(o)||o===this.options.cdataPropName?s+="":"?"===o[0]?s+=this.indentate(e)+"<"+o+"?"+this.tagEndChar:s+=this.indentate(e)+"<"+o+"/"+this.tagEndChar;else if(t[o]instanceof Date)s+=this.buildTextValNode(t[o],o,"",e);else if("object"!=typeof t[o]){const n=this.isAttribute(o);if(n&&!this.ignoreAttributesFn(n,r))i+=this.buildAttrPairStr(n,""+t[o]);else if(!n)if(o===this.options.textNodeName){let e=this.options.tagValueProcessor(o,""+t[o]);s+=this.replaceEntitiesValue(e)}else s+=this.buildTextValNode(t[o],o,"",e)}else if(Array.isArray(t[o])){const i=t[o].length;let r="",a="";for(let l=0;l<i;l++){const i=t[o][l];if(void 0===i);else if(null===i)"?"===o[0]?s+=this.indentate(e)+"<"+o+"?"+this.tagEndChar:s+=this.indentate(e)+"<"+o+"/"+this.tagEndChar;else if("object"==typeof i)if(this.options.oneListGroup){const t=this.j2x(i,e+1,n.concat(o));r+=t.val,this.options.attributesGroupName&&i.hasOwnProperty(this.options.attributesGroupName)&&(a+=t.attrStr)}else r+=this.processTextOrObjNode(i,o,e,n);else if(this.options.oneListGroup){let t=this.options.tagValueProcessor(o,i);t=this.replaceEntitiesValue(t),r+=t}else r+=this.buildTextValNode(i,o,"",e)}this.options.oneListGroup&&(r=this.buildObjectNode(r,o,a,e)),s+=r}else if(this.options.attributesGroupName&&o===this.options.attributesGroupName){const e=Object.keys(t[o]),n=e.length;for(let s=0;s<n;s++)i+=this.buildAttrPairStr(e[s],""+t[o][e[s]])}else s+=this.processTextOrObjNode(t[o],o,e,n);return{attrStr:i,val:s}},ft.prototype.buildAttrPairStr=function(t,e){return e=this.options.attributeValueProcessor(t,""+e),e=this.replaceEntitiesValue(e),this.options.suppressBooleanAttributes&&"true"===e?" "+t:" "+t+'="'+e+'"'},ft.prototype.buildObjectNode=function(t,e,n,i){if(""===t)return"?"===e[0]?this.indentate(i)+"<"+e+n+"?"+this.tagEndChar:this.indentate(i)+"<"+e+n+this.closeTag(e)+this.tagEndChar;{let s="</"+e+this.tagEndChar,r="";return"?"===e[0]&&(r="?",s=""),!n&&""!==n||-1!==t.indexOf("<")?!1!==this.options.commentPropName&&e===this.options.commentPropName&&0===r.length?this.indentate(i)+`\x3c!--${t}--\x3e`+this.newLine:this.indentate(i)+"<"+e+n+r+this.tagEndChar+t+this.indentate(i)+s:this.indentate(i)+"<"+e+n+r+">"+t+s}},ft.prototype.closeTag=function(t){let e="";return-1!==this.options.unpairedTags.indexOf(t)?this.options.suppressUnpairedNode||(e="/"):e=this.options.suppressEmptyNode?"/":`></${t}`,e},ft.prototype.buildTextValNode=function(t,e,n,i){if(!1!==this.options.cdataPropName&&e===this.options.cdataPropName)return this.indentate(i)+`<![CDATA[${t}]]>`+this.newLine;if(!1!==this.options.commentPropName&&e===this.options.commentPropName)return this.indentate(i)+`\x3c!--${t}--\x3e`+this.newLine;if("?"===e[0])return this.indentate(i)+"<"+e+n+"?"+this.tagEndChar;{let s=this.options.tagValueProcessor(e,t);return s=this.replaceEntitiesValue(s),""===s?this.indentate(i)+"<"+e+n+this.closeTag(e)+this.tagEndChar:this.indentate(i)+"<"+e+n+">"+s+"</"+e+this.tagEndChar}},ft.prototype.replaceEntitiesValue=function(t){if(t&&t.length>0&&this.options.processEntities)for(let e=0;e<this.options.entities.length;e++){const n=this.options.entities[e];t=t.replace(n.regex,n.val)}return t};const mt={validate:a};module.exports=e})();
 
 /***/ }),
 
-/***/ 20146:
+/***/ 20828:
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"name":"@aws-sdk/client-s3","description":"AWS SDK for JavaScript S3 Client for Node.js, Browser and React Native","version":"3.958.0","scripts":{"build":"concurrently \'yarn:build:types\' \'yarn:build:es\' && yarn build:cjs","build:cjs":"node ../../scripts/compilation/inline client-s3","build:es":"tsc -p tsconfig.es.json","build:include:deps":"yarn g:turbo run build -F=\\"$npm_package_name\\"","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","extract:docs":"api-extractor run --local","generate:client":"node ../../scripts/generate-clients/single-service --solo s3","test":"yarn g:vitest run","test:browser":"node ./test/browser-build/esbuild && yarn g:vitest run -c vitest.config.browser.mts","test:browser:watch":"node ./test/browser-build/esbuild && yarn g:vitest watch -c vitest.config.browser.mts","test:e2e":"yarn g:vitest run -c vitest.config.e2e.mts && yarn test:browser","test:e2e:watch":"yarn g:vitest watch -c vitest.config.e2e.mts","test:index":"tsc --noEmit ./test/index-types.ts && node ./test/index-objects.spec.mjs","test:integration":"yarn g:vitest run -c vitest.config.integ.mts","test:integration:watch":"yarn g:vitest watch -c vitest.config.integ.mts","test:watch":"yarn g:vitest watch"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha1-browser":"5.2.0","@aws-crypto/sha256-browser":"5.2.0","@aws-crypto/sha256-js":"5.2.0","@aws-sdk/core":"3.957.0","@aws-sdk/credential-provider-node":"3.958.0","@aws-sdk/middleware-bucket-endpoint":"3.957.0","@aws-sdk/middleware-expect-continue":"3.957.0","@aws-sdk/middleware-flexible-checksums":"3.957.0","@aws-sdk/middleware-host-header":"3.957.0","@aws-sdk/middleware-location-constraint":"3.957.0","@aws-sdk/middleware-logger":"3.957.0","@aws-sdk/middleware-recursion-detection":"3.957.0","@aws-sdk/middleware-sdk-s3":"3.957.0","@aws-sdk/middleware-ssec":"3.957.0","@aws-sdk/middleware-user-agent":"3.957.0","@aws-sdk/region-config-resolver":"3.957.0","@aws-sdk/signature-v4-multi-region":"3.957.0","@aws-sdk/types":"3.957.0","@aws-sdk/util-endpoints":"3.957.0","@aws-sdk/util-user-agent-browser":"3.957.0","@aws-sdk/util-user-agent-node":"3.957.0","@smithy/config-resolver":"^4.4.5","@smithy/core":"^3.20.0","@smithy/eventstream-serde-browser":"^4.2.7","@smithy/eventstream-serde-config-resolver":"^4.3.7","@smithy/eventstream-serde-node":"^4.2.7","@smithy/fetch-http-handler":"^5.3.8","@smithy/hash-blob-browser":"^4.2.8","@smithy/hash-node":"^4.2.7","@smithy/hash-stream-node":"^4.2.7","@smithy/invalid-dependency":"^4.2.7","@smithy/md5-js":"^4.2.7","@smithy/middleware-content-length":"^4.2.7","@smithy/middleware-endpoint":"^4.4.1","@smithy/middleware-retry":"^4.4.17","@smithy/middleware-serde":"^4.2.8","@smithy/middleware-stack":"^4.2.7","@smithy/node-config-provider":"^4.3.7","@smithy/node-http-handler":"^4.4.7","@smithy/protocol-http":"^5.3.7","@smithy/smithy-client":"^4.10.2","@smithy/types":"^4.11.0","@smithy/url-parser":"^4.2.7","@smithy/util-base64":"^4.3.0","@smithy/util-body-length-browser":"^4.2.0","@smithy/util-body-length-node":"^4.2.1","@smithy/util-defaults-mode-browser":"^4.3.16","@smithy/util-defaults-mode-node":"^4.2.19","@smithy/util-endpoints":"^3.2.7","@smithy/util-middleware":"^4.2.7","@smithy/util-retry":"^4.2.7","@smithy/util-stream":"^4.5.8","@smithy/util-utf8":"^4.2.0","@smithy/util-waiter":"^4.2.7","tslib":"^2.6.2"},"devDependencies":{"@aws-sdk/signature-v4-crt":"3.957.0","@tsconfig/node18":"18.2.4","@types/node":"^18.19.69","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typescript":"~5.8.3"},"engines":{"node":">=18.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*/**"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-s3","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-s3"}}');
+module.exports = /*#__PURE__*/JSON.parse('{"name":"@aws-sdk/client-s3","description":"AWS SDK for JavaScript S3 Client for Node.js, Browser and React Native","version":"3.966.0","scripts":{"build":"concurrently \'yarn:build:types\' \'yarn:build:es\' && yarn build:cjs","build:cjs":"node ../../scripts/compilation/inline client-s3","build:es":"tsc -p tsconfig.es.json","build:include:deps":"yarn g:turbo run build -F=\\"$npm_package_name\\"","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","extract:docs":"api-extractor run --local","generate:client":"node ../../scripts/generate-clients/single-service --solo s3","test":"yarn g:vitest run","test:browser":"node ./test/browser-build/esbuild && yarn g:vitest run -c vitest.config.browser.mts","test:browser:watch":"node ./test/browser-build/esbuild && yarn g:vitest watch -c vitest.config.browser.mts","test:e2e":"yarn g:vitest run -c vitest.config.e2e.mts && yarn test:browser","test:e2e:watch":"yarn g:vitest watch -c vitest.config.e2e.mts","test:index":"tsc --noEmit ./test/index-types.ts && node ./test/index-objects.spec.mjs","test:integration":"yarn g:vitest run -c vitest.config.integ.mts","test:integration:watch":"yarn g:vitest watch -c vitest.config.integ.mts","test:watch":"yarn g:vitest watch"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha1-browser":"5.2.0","@aws-crypto/sha256-browser":"5.2.0","@aws-crypto/sha256-js":"5.2.0","@aws-sdk/core":"3.966.0","@aws-sdk/credential-provider-node":"3.966.0","@aws-sdk/middleware-bucket-endpoint":"3.966.0","@aws-sdk/middleware-expect-continue":"3.965.0","@aws-sdk/middleware-flexible-checksums":"3.966.0","@aws-sdk/middleware-host-header":"3.965.0","@aws-sdk/middleware-location-constraint":"3.965.0","@aws-sdk/middleware-logger":"3.965.0","@aws-sdk/middleware-recursion-detection":"3.965.0","@aws-sdk/middleware-sdk-s3":"3.966.0","@aws-sdk/middleware-ssec":"3.965.0","@aws-sdk/middleware-user-agent":"3.966.0","@aws-sdk/region-config-resolver":"3.965.0","@aws-sdk/signature-v4-multi-region":"3.966.0","@aws-sdk/types":"3.965.0","@aws-sdk/util-endpoints":"3.965.0","@aws-sdk/util-user-agent-browser":"3.965.0","@aws-sdk/util-user-agent-node":"3.966.0","@smithy/config-resolver":"^4.4.5","@smithy/core":"^3.20.1","@smithy/eventstream-serde-browser":"^4.2.7","@smithy/eventstream-serde-config-resolver":"^4.3.7","@smithy/eventstream-serde-node":"^4.2.7","@smithy/fetch-http-handler":"^5.3.8","@smithy/hash-blob-browser":"^4.2.8","@smithy/hash-node":"^4.2.7","@smithy/hash-stream-node":"^4.2.7","@smithy/invalid-dependency":"^4.2.7","@smithy/md5-js":"^4.2.7","@smithy/middleware-content-length":"^4.2.7","@smithy/middleware-endpoint":"^4.4.2","@smithy/middleware-retry":"^4.4.18","@smithy/middleware-serde":"^4.2.8","@smithy/middleware-stack":"^4.2.7","@smithy/node-config-provider":"^4.3.7","@smithy/node-http-handler":"^4.4.7","@smithy/protocol-http":"^5.3.7","@smithy/smithy-client":"^4.10.3","@smithy/types":"^4.11.0","@smithy/url-parser":"^4.2.7","@smithy/util-base64":"^4.3.0","@smithy/util-body-length-browser":"^4.2.0","@smithy/util-body-length-node":"^4.2.1","@smithy/util-defaults-mode-browser":"^4.3.17","@smithy/util-defaults-mode-node":"^4.2.20","@smithy/util-endpoints":"^3.2.7","@smithy/util-middleware":"^4.2.7","@smithy/util-retry":"^4.2.7","@smithy/util-stream":"^4.5.8","@smithy/util-utf8":"^4.2.0","@smithy/util-waiter":"^4.2.7","tslib":"^2.6.2"},"devDependencies":{"@aws-sdk/signature-v4-crt":"3.966.0","@tsconfig/node18":"18.2.4","@types/node":"^18.19.69","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"5.0.10","typescript":"~5.8.3"},"engines":{"node":">=18.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*/**"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-s3","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-s3"}}');
 
 /***/ })
 

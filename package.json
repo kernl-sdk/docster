@@ -12,9 +12,9 @@
     "@actions/github": "^6.0.0",
     "@ai-sdk/anthropic": "3.0.0-beta.53",
     "@daytonaio/sdk": "^0.128.1",
-    "@kernl-sdk/ai": "workspace:*",
+    "@kernl-sdk/ai": "^0.3.5",
     "@octokit/rest": "^22.0.1",
-    "kernl": "workspace:*",
+    "kernl": "^0.11.4",
     "zod": "^4.1.12"
   },
   "devDependencies": {

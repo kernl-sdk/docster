@@ -1,18 +1,18 @@
-export const id = 776;
-export const ids = [776,859];
+export const id = 469;
+export const ids = [469,288];
 export const modules = {
 
-/***/ 15139:
+/***/ 55482:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.fromTokenFile = void 0;
-const client_1 = __webpack_require__(80073);
-const property_provider_1 = __webpack_require__(94476);
-const shared_ini_file_loader_1 = __webpack_require__(83353);
+const client_1 = __webpack_require__(77705);
+const property_provider_1 = __webpack_require__(94200);
+const shared_ini_file_loader_1 = __webpack_require__(35285);
 const fs_1 = __webpack_require__(79896);
-const fromWebToken_1 = __webpack_require__(92713);
+const fromWebToken_1 = __webpack_require__(32818);
 const ENV_TOKEN_FILE = "AWS_WEB_IDENTITY_TOKEN_FILE";
 const ENV_ROLE_ARN = "AWS_ROLE_ARN";
 const ENV_ROLE_SESSION_NAME = "AWS_ROLE_SESSION_NAME";
@@ -43,7 +43,7 @@ exports.fromTokenFile = fromTokenFile;
 
 /***/ }),
 
-/***/ 92713:
+/***/ 32818:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -87,7 +87,7 @@ const fromWebToken = (init) => async (awsIdentityProperties) => {
     const { roleArn, roleSessionName, webIdentityToken, providerId, policyArns, policy, durationSeconds } = init;
     let { roleAssumerWithWebIdentity } = init;
     if (!roleAssumerWithWebIdentity) {
-        const { getDefaultRoleAssumerWithWebIdentity } = await Promise.resolve().then(() => __importStar(__webpack_require__(2859)));
+        const { getDefaultRoleAssumerWithWebIdentity } = await Promise.resolve().then(() => __importStar(__webpack_require__(89288)));
         roleAssumerWithWebIdentity = getDefaultRoleAssumerWithWebIdentity({
             ...init.clientConfig,
             credentialProviderLogger: init.logger,
@@ -112,13 +112,13 @@ exports.fromWebToken = fromWebToken;
 
 /***/ }),
 
-/***/ 27776:
+/***/ 55469:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var fromTokenFile = __webpack_require__(15139);
-var fromWebToken = __webpack_require__(92713);
+var fromTokenFile = __webpack_require__(55482);
+var fromWebToken = __webpack_require__(32818);
 
 
 
@@ -138,28 +138,28 @@ Object.keys(fromWebToken).forEach(function (k) {
 
 /***/ }),
 
-/***/ 99304:
+/***/ 69827:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.STSClient = exports.__Client = void 0;
-const middleware_host_header_1 = __webpack_require__(97309);
-const middleware_logger_1 = __webpack_require__(19025);
-const middleware_recursion_detection_1 = __webpack_require__(18401);
-const middleware_user_agent_1 = __webpack_require__(20993);
-const config_resolver_1 = __webpack_require__(19532);
-const core_1 = __webpack_require__(29450);
-const schema_1 = __webpack_require__(82722);
-const middleware_content_length_1 = __webpack_require__(26008);
-const middleware_endpoint_1 = __webpack_require__(37202);
-const middleware_retry_1 = __webpack_require__(72337);
-const smithy_client_1 = __webpack_require__(4466);
+const middleware_host_header_1 = __webpack_require__(18784);
+const middleware_logger_1 = __webpack_require__(82374);
+const middleware_recursion_detection_1 = __webpack_require__(94216);
+const middleware_user_agent_1 = __webpack_require__(6313);
+const config_resolver_1 = __webpack_require__(77536);
+const core_1 = __webpack_require__(91752);
+const schema_1 = __webpack_require__(99448);
+const middleware_content_length_1 = __webpack_require__(69684);
+const middleware_endpoint_1 = __webpack_require__(89408);
+const middleware_retry_1 = __webpack_require__(38915);
+const smithy_client_1 = __webpack_require__(78452);
 Object.defineProperty(exports, "__Client", ({ enumerable: true, get: function () { return smithy_client_1.Client; } }));
-const httpAuthSchemeProvider_1 = __webpack_require__(34308);
-const EndpointParameters_1 = __webpack_require__(30204);
-const runtimeConfig_1 = __webpack_require__(41501);
-const runtimeExtensions_1 = __webpack_require__(25025);
+const httpAuthSchemeProvider_1 = __webpack_require__(659);
+const EndpointParameters_1 = __webpack_require__(56435);
+const runtimeConfig_1 = __webpack_require__(6570);
+const runtimeExtensions_1 = __webpack_require__(14518);
 class STSClient extends smithy_client_1.Client {
     config;
     constructor(...[configuration]) {
@@ -199,7 +199,7 @@ exports.STSClient = STSClient;
 
 /***/ }),
 
-/***/ 38535:
+/***/ 57468:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -249,15 +249,15 @@ exports.resolveHttpAuthRuntimeConfig = resolveHttpAuthRuntimeConfig;
 
 /***/ }),
 
-/***/ 34308:
+/***/ 659:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.resolveHttpAuthSchemeConfig = exports.resolveStsAuthConfig = exports.defaultSTSHttpAuthSchemeProvider = exports.defaultSTSHttpAuthSchemeParametersProvider = void 0;
-const core_1 = __webpack_require__(65473);
-const util_middleware_1 = __webpack_require__(96556);
-const STSClient_1 = __webpack_require__(99304);
+const core_1 = __webpack_require__(54305);
+const util_middleware_1 = __webpack_require__(27256);
+const STSClient_1 = __webpack_require__(69827);
 const defaultSTSHttpAuthSchemeParametersProvider = async (config, context, input) => {
     return {
         operation: (0, util_middleware_1.getSmithyContext)(context).operation,
@@ -318,7 +318,7 @@ exports.resolveHttpAuthSchemeConfig = resolveHttpAuthSchemeConfig;
 
 /***/ }),
 
-/***/ 30204:
+/***/ 56435:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -344,15 +344,15 @@ exports.commonParams = {
 
 /***/ }),
 
-/***/ 34202:
+/***/ 7309:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.defaultEndpointResolver = void 0;
-const util_endpoints_1 = __webpack_require__(49517);
-const util_endpoints_2 = __webpack_require__(69721);
-const ruleset_1 = __webpack_require__(44195);
+const util_endpoints_1 = __webpack_require__(9856);
+const util_endpoints_2 = __webpack_require__(73277);
+const ruleset_1 = __webpack_require__(84526);
 const cache = new util_endpoints_2.EndpointCache({
     size: 50,
     params: ["Endpoint", "Region", "UseDualStack", "UseFIPS", "UseGlobalEndpoint"],
@@ -369,7 +369,7 @@ util_endpoints_2.customEndpointFunctions.aws = util_endpoints_1.awsEndpointFunct
 
 /***/ }),
 
-/***/ 44195:
+/***/ 84526:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -383,18 +383,18 @@ exports.ruleSet = _data;
 
 /***/ }),
 
-/***/ 2859:
+/***/ 89288:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 
-var STSClient = __webpack_require__(99304);
-var smithyClient = __webpack_require__(4466);
-var middlewareEndpoint = __webpack_require__(37202);
-var EndpointParameters = __webpack_require__(30204);
-var schema = __webpack_require__(82722);
-var client = __webpack_require__(80073);
-var regionConfigResolver = __webpack_require__(99155);
+var STSClient = __webpack_require__(69827);
+var smithyClient = __webpack_require__(78452);
+var middlewareEndpoint = __webpack_require__(89408);
+var EndpointParameters = __webpack_require__(56435);
+var schema = __webpack_require__(99448);
+var client = __webpack_require__(77705);
+var regionConfigResolver = __webpack_require__(58762);
 
 class STSServiceException extends smithyClient.ServiceException {
     constructor(options) {
@@ -870,27 +870,27 @@ Object.keys(STSClient).forEach(function (k) {
 
 /***/ }),
 
-/***/ 41501:
+/***/ 6570:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getRuntimeConfig = void 0;
-const tslib_1 = __webpack_require__(53824);
-const package_json_1 = tslib_1.__importDefault(__webpack_require__(3634));
-const core_1 = __webpack_require__(65473);
-const util_user_agent_node_1 = __webpack_require__(16197);
-const config_resolver_1 = __webpack_require__(19532);
-const core_2 = __webpack_require__(29450);
-const hash_node_1 = __webpack_require__(5856);
-const middleware_retry_1 = __webpack_require__(72337);
-const node_config_provider_1 = __webpack_require__(31407);
-const node_http_handler_1 = __webpack_require__(83064);
-const smithy_client_1 = __webpack_require__(4466);
-const util_body_length_node_1 = __webpack_require__(90306);
-const util_defaults_mode_node_1 = __webpack_require__(14053);
-const util_retry_1 = __webpack_require__(4766);
-const runtimeConfig_shared_1 = __webpack_require__(30962);
+const tslib_1 = __webpack_require__(67892);
+const package_json_1 = tslib_1.__importDefault(__webpack_require__(96734));
+const core_1 = __webpack_require__(54305);
+const util_user_agent_node_1 = __webpack_require__(8277);
+const config_resolver_1 = __webpack_require__(77536);
+const core_2 = __webpack_require__(91752);
+const hash_node_1 = __webpack_require__(73180);
+const middleware_retry_1 = __webpack_require__(38915);
+const node_config_provider_1 = __webpack_require__(21755);
+const node_http_handler_1 = __webpack_require__(66876);
+const smithy_client_1 = __webpack_require__(78452);
+const util_body_length_node_1 = __webpack_require__(47062);
+const util_defaults_mode_node_1 = __webpack_require__(55918);
+const util_retry_1 = __webpack_require__(49274);
+const runtimeConfig_shared_1 = __webpack_require__(84307);
 const getRuntimeConfig = (config) => {
     (0, smithy_client_1.emitWarningIfUnsupportedVersion)(process.version);
     const defaultsMode = (0, util_defaults_mode_node_1.resolveDefaultsModeConfig)(config);
@@ -944,21 +944,21 @@ exports.getRuntimeConfig = getRuntimeConfig;
 
 /***/ }),
 
-/***/ 30962:
+/***/ 84307:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getRuntimeConfig = void 0;
-const core_1 = __webpack_require__(65473);
-const protocols_1 = __webpack_require__(19167);
-const core_2 = __webpack_require__(29450);
-const smithy_client_1 = __webpack_require__(4466);
-const url_parser_1 = __webpack_require__(91990);
-const util_base64_1 = __webpack_require__(28552);
-const util_utf8_1 = __webpack_require__(44855);
-const httpAuthSchemeProvider_1 = __webpack_require__(34308);
-const endpointResolver_1 = __webpack_require__(34202);
+const core_1 = __webpack_require__(54305);
+const protocols_1 = __webpack_require__(18687);
+const core_2 = __webpack_require__(91752);
+const smithy_client_1 = __webpack_require__(78452);
+const url_parser_1 = __webpack_require__(93282);
+const util_base64_1 = __webpack_require__(11532);
+const util_utf8_1 = __webpack_require__(75579);
+const httpAuthSchemeProvider_1 = __webpack_require__(659);
+const endpointResolver_1 = __webpack_require__(7309);
 const getRuntimeConfig = (config) => {
     return {
         apiVersion: "2011-06-15",
@@ -999,16 +999,16 @@ exports.getRuntimeConfig = getRuntimeConfig;
 
 /***/ }),
 
-/***/ 25025:
+/***/ 14518:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.resolveRuntimeExtensions = void 0;
-const region_config_resolver_1 = __webpack_require__(99155);
-const protocol_http_1 = __webpack_require__(80352);
-const smithy_client_1 = __webpack_require__(4466);
-const httpAuthExtensionConfiguration_1 = __webpack_require__(38535);
+const region_config_resolver_1 = __webpack_require__(58762);
+const protocol_http_1 = __webpack_require__(26204);
+const smithy_client_1 = __webpack_require__(78452);
+const httpAuthExtensionConfiguration_1 = __webpack_require__(57468);
 const resolveRuntimeExtensions = (runtimeConfig, extensions) => {
     const extensionConfiguration = Object.assign((0, region_config_resolver_1.getAwsRegionExtensionConfiguration)(runtimeConfig), (0, smithy_client_1.getDefaultExtensionConfiguration)(runtimeConfig), (0, protocol_http_1.getHttpHandlerExtensionConfiguration)(runtimeConfig), (0, httpAuthExtensionConfiguration_1.getHttpAuthExtensionConfiguration)(runtimeConfig));
     extensions.forEach((extension) => extension.configure(extensionConfiguration));
@@ -1019,10 +1019,10 @@ exports.resolveRuntimeExtensions = resolveRuntimeExtensions;
 
 /***/ }),
 
-/***/ 3634:
+/***/ 96734:
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"name":"@aws-sdk/nested-clients","version":"3.958.0","description":"Nested clients for AWS SDK packages.","main":"./dist-cjs/index.js","module":"./dist-es/index.js","types":"./dist-types/index.d.ts","scripts":{"build":"yarn lint && concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"node ../../scripts/compilation/inline nested-clients","build:es":"tsc -p tsconfig.es.json","build:include:deps":"yarn g:turbo run build -F=\\"$npm_package_name\\"","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","lint":"node ../../scripts/validation/submodules-linter.js --pkg nested-clients","test":"yarn g:vitest run","test:watch":"yarn g:vitest watch"},"engines":{"node":">=18.0.0"},"sideEffects":false,"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","dependencies":{"@aws-crypto/sha256-browser":"5.2.0","@aws-crypto/sha256-js":"5.2.0","@aws-sdk/core":"3.957.0","@aws-sdk/middleware-host-header":"3.957.0","@aws-sdk/middleware-logger":"3.957.0","@aws-sdk/middleware-recursion-detection":"3.957.0","@aws-sdk/middleware-user-agent":"3.957.0","@aws-sdk/region-config-resolver":"3.957.0","@aws-sdk/types":"3.957.0","@aws-sdk/util-endpoints":"3.957.0","@aws-sdk/util-user-agent-browser":"3.957.0","@aws-sdk/util-user-agent-node":"3.957.0","@smithy/config-resolver":"^4.4.5","@smithy/core":"^3.20.0","@smithy/fetch-http-handler":"^5.3.8","@smithy/hash-node":"^4.2.7","@smithy/invalid-dependency":"^4.2.7","@smithy/middleware-content-length":"^4.2.7","@smithy/middleware-endpoint":"^4.4.1","@smithy/middleware-retry":"^4.4.17","@smithy/middleware-serde":"^4.2.8","@smithy/middleware-stack":"^4.2.7","@smithy/node-config-provider":"^4.3.7","@smithy/node-http-handler":"^4.4.7","@smithy/protocol-http":"^5.3.7","@smithy/smithy-client":"^4.10.2","@smithy/types":"^4.11.0","@smithy/url-parser":"^4.2.7","@smithy/util-base64":"^4.3.0","@smithy/util-body-length-browser":"^4.2.0","@smithy/util-body-length-node":"^4.2.1","@smithy/util-defaults-mode-browser":"^4.3.16","@smithy/util-defaults-mode-node":"^4.2.19","@smithy/util-endpoints":"^3.2.7","@smithy/util-middleware":"^4.2.7","@smithy/util-retry":"^4.2.7","@smithy/util-utf8":"^4.2.0","tslib":"^2.6.2"},"devDependencies":{"concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typescript":"~5.8.3"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["./signin.d.ts","./signin.js","./sso-oidc.d.ts","./sso-oidc.js","./sts.d.ts","./sts.js","dist-*/**"],"browser":{"./dist-es/submodules/signin/runtimeConfig":"./dist-es/submodules/signin/runtimeConfig.browser","./dist-es/submodules/sso-oidc/runtimeConfig":"./dist-es/submodules/sso-oidc/runtimeConfig.browser","./dist-es/submodules/sts/runtimeConfig":"./dist-es/submodules/sts/runtimeConfig.browser"},"react-native":{},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/packages/nested-clients","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"packages/nested-clients"},"exports":{"./package.json":"./package.json","./sso-oidc":{"types":"./dist-types/submodules/sso-oidc/index.d.ts","module":"./dist-es/submodules/sso-oidc/index.js","node":"./dist-cjs/submodules/sso-oidc/index.js","import":"./dist-es/submodules/sso-oidc/index.js","require":"./dist-cjs/submodules/sso-oidc/index.js"},"./sts":{"types":"./dist-types/submodules/sts/index.d.ts","module":"./dist-es/submodules/sts/index.js","node":"./dist-cjs/submodules/sts/index.js","import":"./dist-es/submodules/sts/index.js","require":"./dist-cjs/submodules/sts/index.js"},"./signin":{"types":"./dist-types/submodules/signin/index.d.ts","module":"./dist-es/submodules/signin/index.js","node":"./dist-cjs/submodules/signin/index.js","import":"./dist-es/submodules/signin/index.js","require":"./dist-cjs/submodules/signin/index.js"}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"name":"@aws-sdk/nested-clients","version":"3.966.0","description":"Nested clients for AWS SDK packages.","main":"./dist-cjs/index.js","module":"./dist-es/index.js","types":"./dist-types/index.d.ts","scripts":{"build":"yarn lint && concurrently \'yarn:build:types\' \'yarn:build:es\' && yarn build:cjs","build:cjs":"node ../../scripts/compilation/inline nested-clients","build:es":"tsc -p tsconfig.es.json","build:include:deps":"yarn g:turbo run build -F=\\"$npm_package_name\\"","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","lint":"node ../../scripts/validation/submodules-linter.js --pkg nested-clients","test":"yarn g:vitest run","test:watch":"yarn g:vitest watch"},"engines":{"node":">=18.0.0"},"sideEffects":false,"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","dependencies":{"@aws-crypto/sha256-browser":"5.2.0","@aws-crypto/sha256-js":"5.2.0","@aws-sdk/core":"3.966.0","@aws-sdk/middleware-host-header":"3.965.0","@aws-sdk/middleware-logger":"3.965.0","@aws-sdk/middleware-recursion-detection":"3.965.0","@aws-sdk/middleware-user-agent":"3.966.0","@aws-sdk/region-config-resolver":"3.965.0","@aws-sdk/types":"3.965.0","@aws-sdk/util-endpoints":"3.965.0","@aws-sdk/util-user-agent-browser":"3.965.0","@aws-sdk/util-user-agent-node":"3.966.0","@smithy/config-resolver":"^4.4.5","@smithy/core":"^3.20.1","@smithy/fetch-http-handler":"^5.3.8","@smithy/hash-node":"^4.2.7","@smithy/invalid-dependency":"^4.2.7","@smithy/middleware-content-length":"^4.2.7","@smithy/middleware-endpoint":"^4.4.2","@smithy/middleware-retry":"^4.4.18","@smithy/middleware-serde":"^4.2.8","@smithy/middleware-stack":"^4.2.7","@smithy/node-config-provider":"^4.3.7","@smithy/node-http-handler":"^4.4.7","@smithy/protocol-http":"^5.3.7","@smithy/smithy-client":"^4.10.3","@smithy/types":"^4.11.0","@smithy/url-parser":"^4.2.7","@smithy/util-base64":"^4.3.0","@smithy/util-body-length-browser":"^4.2.0","@smithy/util-body-length-node":"^4.2.1","@smithy/util-defaults-mode-browser":"^4.3.17","@smithy/util-defaults-mode-node":"^4.2.20","@smithy/util-endpoints":"^3.2.7","@smithy/util-middleware":"^4.2.7","@smithy/util-retry":"^4.2.7","@smithy/util-utf8":"^4.2.0","tslib":"^2.6.2"},"devDependencies":{"concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"5.0.10","typescript":"~5.8.3"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["./signin.d.ts","./signin.js","./sso-oidc.d.ts","./sso-oidc.js","./sts.d.ts","./sts.js","dist-*/**"],"browser":{"./dist-es/submodules/signin/runtimeConfig":"./dist-es/submodules/signin/runtimeConfig.browser","./dist-es/submodules/sso-oidc/runtimeConfig":"./dist-es/submodules/sso-oidc/runtimeConfig.browser","./dist-es/submodules/sts/runtimeConfig":"./dist-es/submodules/sts/runtimeConfig.browser"},"react-native":{},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/packages/nested-clients","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"packages/nested-clients"},"exports":{"./package.json":"./package.json","./sso-oidc":{"types":"./dist-types/submodules/sso-oidc/index.d.ts","module":"./dist-es/submodules/sso-oidc/index.js","node":"./dist-cjs/submodules/sso-oidc/index.js","import":"./dist-es/submodules/sso-oidc/index.js","require":"./dist-cjs/submodules/sso-oidc/index.js"},"./sts":{"types":"./dist-types/submodules/sts/index.d.ts","module":"./dist-es/submodules/sts/index.js","node":"./dist-cjs/submodules/sts/index.js","import":"./dist-es/submodules/sts/index.js","require":"./dist-cjs/submodules/sts/index.js"},"./signin":{"types":"./dist-types/submodules/signin/index.d.ts","module":"./dist-es/submodules/signin/index.js","node":"./dist-cjs/submodules/signin/index.js","import":"./dist-es/submodules/signin/index.js","require":"./dist-cjs/submodules/signin/index.js"}}}');
 
 /***/ })
 

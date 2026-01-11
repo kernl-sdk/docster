@@ -2,6 +2,38 @@
 
 Auto-update docs on code changes via PR.
 
+## Installation
+
+1. Create `.github/workflows/docster.yml` in your repo:
+
+```yaml
+name: Docster
+on: [pull_request, push]
+
+jobs:
+  update-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: kernl-sdk/docster@master
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          daytona_api_key: ${{ secrets.DAYTONA_API_KEY }}
+```
+
+2. Add secrets to your repo (**Settings → Secrets and variables → Actions**):
+   - `ANTHROPIC_API_KEY` - your Anthropic API key
+   - `DAYTONA_API_KEY` - your Daytona API key
+
+3. (Optional) Configure the docs path if your documentation isn't in `docs/`:
+
+```yaml
+- uses: kernl-sdk/docster@master
+  with:
+    anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+    daytona_api_key: ${{ secrets.DAYTONA_API_KEY }}
+    docs_path: "documentation"  # custom path
+```
+
 ## How it works
 
 ```
@@ -40,7 +72,6 @@ This two-stage approach saves cost and time by skipping the full sandbox when no
 ## Files
 
 ```
-microprojects/docster/
 ├── action.yml              # GitHub Action definition
 ├── src/
 │   ├── index.ts            # Entry: two-stage orchestration
@@ -53,23 +84,6 @@ microprojects/docster/
 ├── package.json
 ├── tsconfig.json
 └── README.md
-```
-
-## Usage
-
-```yaml
-# .github/workflows/docster.yml
-name: Docster
-on: [pull_request, push]
-
-jobs:
-  update-docs:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: kernl-sdk/docster@v1
-        with:
-          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          daytona_api_key: ${{ secrets.DAYTONA_API_KEY }}
 ```
 
 ## Agents
